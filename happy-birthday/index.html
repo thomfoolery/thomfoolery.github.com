@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<title>To a Special Girl</title>
+	<style>
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	
+	background-color: black;
+	color: lightgrey;
+	font-family: arial, sans-serif;
+	font-smooth: always;
+}
+body{
+	position: relative;
+}
+article{
+	width: 600px;
+}
+p{
+	display: block;
+	position: absolute;
+	
+	left: 50%;
+	top: 50%;
+	
+	width: 640px;
+	height: 100px;
+	line-height: 50px;
+	
+	margin: -50px -300px;
+	
+	font-size: 40px;
+	
+	text-align: center;
+	
+	opacity: 0;
+}
+p.sml{
+	line-height: 100px;
+	font-size: 25px;
+}
+p.med{
+	line-height: 100px;
+	font-size: 60px;
+}
+p.big{
+	line-height: 100px;
+	font-size: 100px;
+}
+em{
+	color: #f50082;
+	font-family: 'Permanent Marker', cursive;
+	font-style: none;
+	padding-right: 5px;
+}
+iframe{
+	position: absolute;
+	left: -9999em;
+}
+.no-js p{
+	position: relative;
+	margin: 50px auto;
+	opacity: 1;
+}
+
+.pink{
+	color: #f50082;
+}
+.heart{
+	font-size: 200px;
+	
+	-webkit-transition-property: -webkit-transform; 
+	
+	-webkit-animation-name: throb;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes throb {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	50%{
+		-webkit-transform: scale(2);
+	}
+	100% { 
+		-webkit-transform: scale(1);
+	}
+}
+	</style>
+	<script> document.getElementsByTagName('html')[0].className = ''; </script>
+	<script type="text/javascript">
+	WebFontConfig = {
+		google: { families: [ 'Permanent+Marker::latin' ] }
+	};
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})(); </script>
+</head>
+<body>
+	
+	<article>
+		
+		<p class="med pink">
+			<em>HAPPY BIRTHDAY!</em>
+		</p>
+		
+		<p>
+			to the girl with the<br/>
+			most beautiful <em>eyes</em>,
+		</p>
+		
+		<p>
+			and a <em>smile</em> that could light<br/>
+			up the dullest grey skies...
+		</p>
+		
+		<p>
+			I wish you the <em>best</em> on<br/>
+			this momentous occasion,
+		</p>
+		
+		<p>
+			that you don't have a fret, frown<br/>
+			or worry, of any <em>persuasion</em>...
+		</p>
+		
+		<p>
+			Your wonderful personality<br/>
+			has won over my <em>heart</em>,
+		</p>
+		
+		<p>
+			and I am thankful that you<br/>
+			don't really mind it when I fart...<br/>
+			<strong class="pink">; P</strong>
+		</p>
+		
+		<p>
+			So make sure to <em>enjoy</em> yourself<br/>
+			thoughout your special day,
+		</p>
+		
+		<p>
+			and don't let <em>anyone</em> bother<br/>
+			you or get in your way...
+		</p>
+		
+		<p>
+			I want to give you an adventure<br/>
+			we can <em>share</em> together,
+		</p>
+		
+		<p>
+			So I hope you will accompany me<br/>
+			on a trip to <em>remember</em> forever...
+		</p>
+		
+		<p>
+			on August 3rd to the 5th<br/>
+			Would you be <em>my</em> date to...
+		</p>
+		
+		<p class="med">
+			<em>OSHEAGA 2012</em>
+		</p>
+		
+		<p class="big">
+			<em>XO</em>
+		</p>
+		
+		<p class="big pink heart">
+			&hearts;
+		</p>
+		
+	</article>
+	
+	<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1529384&amp;auto_play=true&amp;show_artwork=false&amp;color=ff7700"></iframe>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script src="jquery.animate-enhanced.min.js"></script>
+	<script>
+		$(document).ready( function() {
+			
+			var $p = $('p'),
+				$current,
+				
+				i = -1,
+				pCount = $p.length,
+				displayDuration = 3000,
+				transitionDuration = 3000
+			;
+			
+			displayNext();
+			
+			function displayNext(){
+				
+				i++;
+				
+				$p.eq( i ).animate({opacity: 1}, {duration: transitionDuration / 2, complete: hide});
+			}
+			
+			function hide(){
+				
+				if ( i === pCount -1 ) {
+					
+					return;
+				}
+				
+				setTimeout( function(){
+					$p.eq( i ).animate({opacity: 0}, {duration: displayDuration, complete: displayNext} );
+				}, displayDuration );
+			}
+		});
+	</script>
+	
+</body>
+</html>

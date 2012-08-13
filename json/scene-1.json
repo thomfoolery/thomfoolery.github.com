@@ -1,0 +1,28 @@
+{
+  "sign": {
+    "action": {
+      "look": [
+        "This must be the place",
+        ".. what a dump"
+      ]
+    }
+  },
+  "door": {
+    "action": {
+      "look": [
+        "-KNOCK KNOCK-",
+        "      ",
+        "OPEN ... SESAME!",
+        "      ",
+        "meh"
+      ]
+    }
+  },
+  "bike": {
+    "action": {
+      "look": [
+        "I bet this guy gets all the chicks"
+      ]
+    }
+  }
+}
