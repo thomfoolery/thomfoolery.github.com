@@ -1,6 +1,6 @@
 /*
  * Author: Thomas Yuill 2012
- * 
+ *
  * DISCLAIMER
  * ----------
  * This is my hackspace. Code is not as elegant as could be.
@@ -20,13 +20,17 @@ var $canvas, ctx,
     CANVAS_HEIGHT, canvasHeight,
 
     MOUSE_X, mouseX,
-    MOUSE_Y, mouseY
+    MOUSE_Y, mouseY,
 
     KEY_PRESSED = false,
     KEY_UP      = false,
     KEY_LEFT    = false,
     KEY_RIGHT   = false,
-    KEY_DOWN    = false
+    KEY_DOWN    = false,
+
+    geocoder,
+    mapOptions,
+    map
     ;
 
 // create canvas
@@ -49,6 +53,29 @@ $('header').prepend( $canvas )
   .find('hgroup')
   .css('position', 'relative');
 
+// map
+geocoder = new google.maps.Geocoder();
+geocoder.geocode( { 'address': 'Toronto, Canada'}, function( results, status ) {
+
+  if (status == google.maps.GeocoderStatus.OK) {
+
+    map.setCenter(results[0].geometry.location);
+    var marker = new google.maps.Marker({
+        map: map,
+        animation: google.maps.Animation.DROP,
+        position: results[0].geometry.location
+    });
+  }
+});
+
+mapOptions = {
+  zoom: 12,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  mapTypeControl: false
+};
+
+map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
 
 // EXPERIMENT SELECTOR
 //====================
@@ -56,43 +83,30 @@ $('header').prepend( $canvas )
 var experiments = ['5','6','7', '8'];
 
     $experiments = $('<div class="experiment-selector">'),
-    $content     = $('<div class="content"/>'),
-    $toggle      = $('<a href="#" class="btn-toggle-experiment-selector">+</a>'),
-    $tooltip     = $('<span class="tool-tip">Click here to change the header doodle.</span>')
+    $content     = $('<div class="content"></div>'),
+    $toggle      = $('<a href="#" class="btn-toggle-experiment-selector">+</a>')
     ;
 
 for ( var i = 0, len = experiments.length; i < len; i++ ){
   $content.append('<a href="/?exp=' + experiments[ i ] + '" class="exp-' + experiments[ i ] + '">' + ( i +1 ) + '</a>' );
 }
 
-$toggle.css({
-    position: 'absolute',
-    right: 0,
-    top: '-.25em',
-    fontSize: '3em'
-  })
+$toggle
   .click( function ( e ) {
 
     if ( $toggle.hasClass('open') ){
 
       $toggle.removeClass('open');
+      $toggle.text('+');
       $experiments.slideUp();
     }else{
 
       $toggle.addClass('open');
+      $toggle.text('-');
       $experiments.slideDown();
     }
   })
-  .append( $tooltip )
-  .mouseenter( function( e ){ $tooltip.stop().fadeIn(); })
-  .mouseleave( function( e ){ $tooltip.stop().fadeOut(); });
-  
-$tooltip
-  .hide()
-  .delay( 500 )
-  .fadeIn()
-  .delay( 3000 )
-  .fadeOut();
+;
 
 $experiments.append( $content ).insertAfter( $('header') ).slideUp(0);
 $('#wrap').prepend( $toggle );
@@ -177,8 +191,10 @@ function BBhitTest( a, b ){
 
 var currentExperimentNumber;
 
-start_experiment( parseInt( getParamByName('exp') ) )
+load_style( getParamByName('style') );
+load_experiment( parseInt( getParamByName('exp') ) );
 
+// get param by name
 function getParamByName( name ) {
 
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -193,8 +209,16 @@ function getParamByName( name ) {
     return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+// load style
+function load_style( style ) {
+
+  if ( ! style ) return; //exit
+
+  $('#main-style').attr('href', 'css/' + style + '.css');
+}
+
 // load experiment
-function start_experiment( number ) {
+function load_experiment( number ) {
 
   if ( isNaN( number ) )
     number = 7;

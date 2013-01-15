@@ -29,7 +29,8 @@
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
 
-        <link rel="stylesheet" type="text/css" href="css/style.minimal.css">
+        <link rel="stylesheet" type="text/css" href="css/style.minimal.css" id="main-style">
+        <!--[if (gte IE 6)&(lte IE 8)]><script src="selectivizr-min.js"></script><![endif]-->
         <script src="js/libs/modernizr.min.js"></script>
 
     </head>
@@ -51,33 +52,39 @@
 
             <nav id="top-nav">
                 <h2>My</h2>
-              <ul>
-                <!--
-                <li>
-                    <a href="#about" class="about">About Me</a>
-                </li>
-                -->
-                <li>
-                    <a href="#experience" class="experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#education" class="education">Education</a>
-                </li>
-                <li>
-                    <a href="#knowledge" class="knowledge">Knowledge</a>
-                </li>
-                <li>
-                    <a href="#contact" class="contact">Contact</a>
-                </li>
-                <li>
-                    <a href="resume.pdf">R&eacute;sum&eacute;</a>
-                </li>
-              </ul>
+
+                <ul>
+                    <li>
+                        <a href="#experience" class="experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#education" class="education">Education</a>
+                    </li>
+                    <li>
+                        <a href="#knowledge" class="knowledge">Knowledge</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="resume.pdf">R&eacute;sum&eacute;</a>
+                    </li>
+                </ul>
             </nav>
 
 
             <!-- MAIN -->
             <div id="main" role="main">
+
+                <!-- Map -->
+                <section id="location">
+                    <div class="map-container">
+                        <div id="map-canvas"></div>
+                    </div>
+                    <p>
+                        Currently located in Toronto, Ontario Canada.
+                    </p>
+                </section>
 
                 <!-- Work Experience -->
                 <section id="experience">
@@ -150,7 +157,7 @@
                                         <img src="/img/showcase/thumb/cbc-player.jpg" alt="screenshot of the CBC.ca Media Player home page">
                                     </a>
                                     <strong>the Consolidated Media Player</strong>
-                                    HTML and JS interface with flash player
+                                    HTML and JS interface
                                     <a href="http://www.cbc.ca/video/" target="_blank">www.cbc.ca/video/</a>
                                 </li>
                                 <li>
@@ -502,7 +509,7 @@
 
         <!-- FOR LATER USE
         <div class="quotes">
-            <p class="quote">
+            <p class="quote" data-origin="Brian Elton">
                 <sup>&ldquo;</sup>
                 Thomas has a thirst for knowledge ...
                 He is up for any challenge you put in front of him ...
@@ -512,7 +519,7 @@
                     <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
                 </small>
             </p>
-            <p class="quote">
+            <p class="quote" data-origin="Dmitri Farkov">
                 <sup>&ldquo;</sup>
                 Thomas is a talented developer with a knack for developing graphically and
                 functionally rich web applications...
@@ -522,14 +529,14 @@
                     <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
                 </small>
             </p>
-            <p class="quote">
+            <p class="quote" data-origin="Aaron Cepukas">
                 <sup>&ldquo;</sup>Thomas is very eager to master the various technologies involved in web interface development...<sub>&rdquo;</sub>
                 <small>
                     - Aaron Cepukas, developer<br/>
                     <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
                 </small>
             </p>
-            <p class="quote">
+            <p class="quote" data-origin="Lisa Stephenson">
                 <sup>&ldquo;</sup>Thomas was one of my favourite developers to work with at henderson bas...<sub>&rdquo;</sub>
                 <small>
                     - Lisa Stephenson, project manager<br/>
@@ -544,9 +551,8 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
         <script>window.jQuery || document.write("<script src='js/libs/jquery-1.7.1.min.js'>\x3C/script>")</script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-        <script src="selectivizr-min.js"></script>
-        <![endif]-->
+
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBHxrPJ8RuGTejFbiB60ykROeLsJffpxOE&sensor=true"></script>
 
         <script src="js/plugins.js"></script>
         <script src="js/script.js"></script>
