@@ -1,0 +1,251 @@
+@import 'reset.css';
+
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400);
+/* PRINT STYLES */
+@media print {
+  /* BOILER PLATE */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@font-face {
+  font-family: 'Ostrich Bold';
+  src: url('/fonts/ostrich/ostrich-bold-webfont.eot');
+  src: url('/fonts/ostrich/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('/fonts/ostrich/ostrich-bold-webfont.woff') format('woff'), /* Modern Browsers */
+   url('/fonts/ostrich/ostrich-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('/fonts/ostrich/ostrich-bold-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Ostrich Black';
+  src: url('/fonts/ostrich/ostrich-black-webfont.eot');
+  src: url('/fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('/fonts/ostrich/ostrich-black-webfont.woff') format('woff'), /* Modern Browsers */
+   url('/fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('/fonts/ostrich/ostrich-black-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Blackout Sunrise';
+  src: url('/fonts/blackout/blackout_sunrise-webfont.eot');
+  src: url('/fonts/blackout/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('/fonts/blackout/blackout_sunrise-webfont.woff') format('woff'), /* Modern Browsers */
+   url('/fonts/blackout/blackout_sunrise-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('/fonts/blackout/blackout_sunrise-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+.L-row {
+  display: block;
+  float: none;
+  clear: both;
+}
+.L-column {
+  float: left;
+}
+.L-full {
+  width: 100%;
+}
+.L-half {
+  width: 50%;
+}
+.L-third {
+  width: 33.3333%;
+}
+.L-two-thirds {
+  width: 66.6666%;
+}
+.L-quarter {
+  width: 25%;
+}
+.L-three-quarters {
+  width: 25%;
+}
+/* FUNCTIONAL CLASSES */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* Hide for both screenreaders and browsers:
+css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+j.mp/bestclearfix */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  -webkit-perpective: 800;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6 {
+  text-rendering: optimizeLegibility;
+}
+header {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+  z-index: 9;
+  -webkit-transform-style: preserve-3d;
+}
+header hgroup {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+header hgroup .full-name {
+  line-height: 1em;
+  font-size: 10em;
+  font-weight: normal;
+  font-family: 'Ostrich Bold';
+}
+header hgroup .full-name span {
+  display: inline-block;
+}
+header hgroup .full-name span:first-letter {
+  font-size: 1.2em;
+}
+header hgroup .job-title {
+  line-height: 1em;
+  font-size: 5em;
+  font-weight: bold;
+  font-family: 'Blackout Sunrise';
+}
+header hgroup .job-title span {
+  display: inline-block;
+}
+header hgroup .job-title span:first-letter {
+  font-size: 1.2em;
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  margin: 0;
+  color: white;
+  text-align: left;
+  z-index: 9;
+}

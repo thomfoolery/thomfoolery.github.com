@@ -1,0 +1,957 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"exp",
+				"experiments"
+			],
+			[
+				"exper",
+				"experimentNumber"
+			],
+			[
+				"rad",
+				"radius"
+			],
+			[
+				"sp",
+				"spawnOrigin"
+			],
+			[
+				"get",
+				"getMousePosition"
+			],
+			[
+				"in",
+				"interval"
+			],
+			[
+				"inv",
+				"intervalLapsed"
+			],
+			[
+				"life",
+				"lifeSpan"
+			],
+			[
+				"time",
+				"timeLapsed"
+			],
+			[
+				"tim",
+				"timeLapsed"
+			],
+			[
+				"display",
+				"DISPLAY"
+			],
+			[
+				"trap",
+				"trapFocus"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"col",
+				"collapsible-toggle"
+			],
+			[
+				"ima",
+				"imageData"
+			],
+			[
+				"da",
+				"darkenBy"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
+				"obje",
+				"objects"
+			],
+			[
+				"ctx",
+				"ctxRatio"
+			],
+			[
+				"im",
+				"imageData"
+			],
+			[
+				"outter",
+				"outterWidth"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 27012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/script.js",
+			"settings":
+			{
+				"buffer_size": 5457,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 21,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/LESS-build/LESS.sublime-build",
+	"command_palette":
+	{
+		"height": 357.0,
+		"selected_items":
+		[
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"fet",
+				"Fetch"
+			],
+			[
+				"fe",
+				"Fetch: Manage remote files"
+			],
+			[
+				"bui",
+				"Build: Build"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"FET",
+				"Fetch"
+			],
+			[
+				"",
+				"Fetch: Manage remote files"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/thomasyuill/Development/TBY/css/style.minimal.less",
+		"/Users/thomasyuill/Development/TBY/less/style.minimal.less",
+		"/Users/thomasyuill/Development/TBY/css/metro.less",
+		"/Users/thomasyuill/Library/Application Support/Sublime Text 2/Packages/LESS-build/LESS.sublime-build",
+		"/Users/thomasyuill/Library/Application Support/Sublime Text 2/Packages/SublimeOnSaveBuild/README.md",
+		"/Users/thomasyuill/Library/Application Support/Sublime Text 2/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/Users/thomasyuill/Library/Application Support/Sublime Text 2/Packages/User/LESS.sublime-settings",
+		"/Users/thomasyuill/Development/TBY/css/style.minimal.css",
+		"/Library/WebServer/Documents/SANDBOX/js/io/controls.js",
+		"/Library/WebServer/Documents/SANDBOX/js/io/display.js",
+		"/Library/WebServer/Documents/SANDBOX/js/utils/animator.js",
+		"/Library/WebServer/Documents/SANDBOX/index.html",
+		"/Library/WebServer/Documents/SANDBOX/css/style.less",
+		"/Library/WebServer/Documents/GAME-ADV/index.html",
+		"/Library/WebServer/Documents/TBY/js/script.js",
+		"/Library/WebServer/Documents/SANDBOX/js/script.js",
+		"/Library/WebServer/Documents/SANDBOX/js/plugins.js",
+		"/Library/WebServer/Documents/SANDBOX/css/normalize.less",
+		"/Library/WebServer/Documents/SANDBOX/css/style.css",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/js/modules/rotator.js",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/download-list.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/FAQ.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/post.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/posts.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/product-page.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/tabbed-content.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/base-template.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/collapsible-content.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/pages/home-page.en.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_layouts/base.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_includes/global/header.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_modules/service-menu.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_widgets/rotator.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_jquery-ui.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_pages/home.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/style.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/style.css",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/js/script.js",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_modules/site-footer.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_includes/global/footer.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/js/modernizr.js",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_modules/mega-menu.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_modules/site-top.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_pages/resource-post.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/css/_widgets/get-quote.less",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_includes/global/footer-home.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_includes/modules/mega-menu.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_includes/modules/service-menu.html",
+		"/Library/WebServer/Documents/BNS-SCOTIA-LIFE/_site/css/style.css",
+		"/private/etc/hosts",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-step1A.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-CardOptionsB.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-errorA.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-errorB.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-step1A.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-step1B.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-step2A.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-INV-VAL-step2B.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-PROX-apply.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/STAPLES-PROX-approved.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-step2B.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/css/tod.css",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-PROX-apply.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-errorB.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-CardOptionsA.html",
+		"/Users/thomasy/Desktop/activation-PG.css",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-errorA.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-PROX-approved.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-CardOptions.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-error.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-step1B.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/TOD-INV-VAL-step2A.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/svc/css/gl2.css",
+		"/Users/thomasy/Desktop/commonACQApply.txt",
+		"/Users/thomasy/Desktop/cards/acq/js/commonACQApply.js",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-step1B.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-step1A.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-PROX-approved.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-PROX-apply.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-step2B.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-step2A.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-error.html",
+		"/Users/thomasy/Desktop/cards/acq/TOD-INV-VAL-CardOptions.html",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/js/script.js",
+		"/Library/WebServer/Documents/CITI-AO/cards/svc/Sears-GL2-Step3.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/svc/js/gl2-script.js",
+		"/Library/WebServer/Documents/CITI-AO/cards/svc/gl2-cell-policy.html",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/GoodYear-Apply.html",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/private/etc/apache2/httpd.conf",
+		"/Library/WebServer/Documents/CITI-AO/cards/acq/css/gen.css",
+		"/private/var/log/apache2/citi.localhost-error_log",
+		"/Library/WebServer/Documents/CITI-AO/.htaccess",
+		"/private/etc/apache2/users/administrator.conf",
+		"/private/etc/apache2/users/thomasy.conf",
+		"/private/var/log/apache2/citi.localhost-access_log",
+		"/Library/WebServer/Documents/CITI-ACCOUNTS-ONLINE /.htaccess",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/css/elements.less",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/css/base.less",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/css/style.css",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/.htaccess",
+		"/Users/thomasy/Desktop/Home/fr/products.html",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/index.html",
+		"/Users/thomasy/Desktop/Home/en/products.html",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/js/plugins.js",
+		"/Library/WebServer/Documents/KNOCKOUT-JS/css/base.css",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/Library/WebServer/Documents/GAME-ADV/js/io/control.js",
+		"/Library/WebServer/Documents/TBY/js/experiment/8.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/io/screen.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/plugins.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/utils/animator.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/utils/canvas.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/classes/scene.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/utils/geometry.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/canvas-context.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/control-input.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/geometry.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/libs/canvas.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/scene.js",
+		"/Library/WebServer/Documents/GAME-ADV/js/character.js",
+		"/Library/WebServer/Documents/GAME-ADV/css/main.less",
+		"/Library/WebServer/Documents/GAME-ADV/js/animation.js",
+		"/Users/thomasy/Library/Application Support/Sublime Text 2/Packages/Default/Distraction Free.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"<current file>",
+			"<open project> *.less",
+			"<open project>",
+			"<open files>",
+			"products.html,/Library/WebServer/Documents/CITI-AO/cards/svc",
+			"products.html",
+			"player.js",
+			"scene.js",
+			"canvas.js",
+			"player.js",
+			"scene.js",
+			"canvas.js",
+			"player.js",
+			"scene.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"load_style",
+			"main",
+			"$tooltip",
+			",\n            count:      2",
+			"Ring1",
+			"orbit.divisions",
+			"radians",
+			"_P.orbit",
+			"intervals.",
+			"s.spawn",
+			"interval",
+			"Interval",
+			"interval",
+			"add",
+			"resize",
+			"this.life / this.lifeSpan",
+			"( ",
+			"$( window ).",
+			"API",
+			"api",
+			"role",
+			"overlay-content",
+			"contianer",
+			"css-im",
+			"@css-im",
+			"@css",
+			".box-s",
+			"tabs",
+			"<a href=\"\" class=\"collapsible-toggle\">",
+			" class=\"collapsible-content\"",
+			":hover",
+			".hover",
+			"html",
+			"top",
+			"offerInv.attr(\"citireq\")",
+			"Cancel",
+			"jsStringErrorNumDigits",
+			"p",
+			"tod.css",
+			"cardpic",
+			"cardpiv",
+			"img/staples-credit-card-lg.jpg\"",
+			"<img src=\"img/office-depot-credit-card-lg.jpg\" ",
+			"<img src=\"img/office-depot-credit-card-lg.jpg\" alt=\"Office Depot® Personal Credit Account\">",
+			"<img src=\"img/office-depot-credit-card-lg.jpg\" alt=\"Office DepotÂ® Personal Credit Account\">",
+			"staples",
+			"<img id=\"logo\" src=\"acq/img/tod/staples_logo.gif\" alt=\"Office Depot\" /> </div>",
+			"officedepot_logo.gif",
+			"Cancel",
+			"Need help",
+			"cardPi",
+			"\"/cards/wv/",
+			"=\"/",
+			"\"/cards/acq/",
+			"2step1",
+			"\"/cards/acq/",
+			"\"/cards/wv/",
+			"vr_nav_d",
+			"veris",
+			"Office-Dep",
+			"wv/",
+			"ACQ",
+			"acq",
+			"\"/cards/",
+			"office-depot-c",
+			"acq/acq",
+			"\"/cards/",
+			"\"/",
+			"/cards/wv/",
+			"\"/",
+			"/img",
+			"acq/",
+			"\"/cards/acq",
+			"\"/cards/acq/",
+			"<!-- Offic",
+			"acq/acq",
+			"TryA",
+			"event.js",
+			"events.js",
+			"\"/cards/acq/",
+			"/cards/acq/",
+			"office-depot-credit-card",
+			"img/",
+			"/cards/acq/img",
+			"tod.css",
+			".css",
+			"apply-side-nav",
+			"#header",
+			"cboxLoaded",
+			"cboxLo",
+			"UID",
+			"input",
+			"SRC_CODE",
+			"SALE_AMT",
+			"OPERATOR_ID",
+			"STORE_CODE_REQ",
+			"UID",
+			"ui",
+			"UID",
+			"STORE_CODE_REQ",
+			"inout",
+			"STORE_CODE_REQ",
+			"BUSINESS_ZIP",
+			"NAME_OF_BUSINESS",
+			" ` ",
+			"`",
+			"leaseOrPurchase",
+			"Sign Up Now",
+			"input[type",
+			"input[",
+			"input [",
+			"card-op",
+			"card",
+			"overl",
+			"We may contact ",
+			"We may contact you at any cell number you provide. You agree to receive calls and messages, such as text messages or prerecorded or autodialed calls, to service your account. You understand that normal cell phone charges may apply.",
+			"jScrollPane",
+			"License",
+			"Driver's License",
+			"AllowOverride All",
+			"AllowOverride",
+			"All",
+			"AllowOverride",
+			"default",
+			"citi",
+			" \">",
+			"searchParticular",
+			" \n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<a href=\"question-1\" class=\"collapsible-toggle\">",
+			"id=\"question-\" class=\"collapsible-content\"",
+			" id=\"question-1\" class=\"collapsible-content\"",
+			"staples.css",
+			"<img src=\"img/staples-credit-card-lg.jpg\"",
+			"<img src=\"img/staples-credit-card-lg.jpg\" alt=\"Staples Business® Account\">",
+			"<img id=\"logo\" src=\"acq/img/staples/staples_logo.gif\" alt=\"Staples. That was easy\" /> </div>",
+			"staples_logo.gif",
+			"Peut contenir des arachides et des noix.",
+			"height",
+			"width",
+			"_P.gfx.ctx",
+			"_P.gfx.canvas",
+			"ctxRatio",
+			"gfxObject",
+			"resetSelection",
+			"getSelection",
+			"bg",
+			"imageData",
+			"ctx_ratio",
+			"self",
+			"_P.x",
+			"io_CONTROL",
+			"_ctx",
+			"_P.width"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 27012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1240,
+								849
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/script.js",
+					"settings":
+					{
+						"buffer_size": 5457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4397,
+								4397
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 21,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true
+}
