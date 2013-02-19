@@ -11,14 +11,12 @@
   $canvas.style.width = '100%';
   $canvas.style.height = '100%';
 
-
   resize();
   function resize () {
     $canvas.width = $body.offsetWidth;
     $canvas.height = $body.offsetHeight;
   }
   window.addEventListener('resize', resize );
-
 
   document.querySelector('body').appendChild( $canvas );
 

@@ -178,7 +178,6 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
   -webkit-perpective: 800;
 }
 html h1,
@@ -214,6 +213,7 @@ header hgroup {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-shadow: 5px 5px 10px #000000, -5px -5px 10px #000000, 5px -5px 10px #000000, -5px 5px 10px #000000;
 }
 header hgroup .full-name {
   line-height: 1em;
@@ -228,6 +228,7 @@ header hgroup .full-name span:first-letter {
   font-size: 1.2em;
 }
 header hgroup .job-title {
+  margin-bottom: 30px;
   line-height: 1em;
   font-size: 5em;
   font-weight: bold;
@@ -239,6 +240,18 @@ header hgroup .job-title span {
 header hgroup .job-title span:first-letter {
   font-size: 1.2em;
 }
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header ul li {
+  display: inline-block;
+  padding: 5px 1em;
+  margin: 0 1em;
+  font-size: 1.4em;
+  text-shadow: 0 0 10px #000000;
+}
 footer {
   position: absolute;
   right: 0;
@@ -248,4 +261,12 @@ footer {
   color: white;
   text-align: left;
   z-index: 9;
+}
+@media screen and (max-width: 1250px) {
+  header hgroup .full-name {
+    font-size: 7.5em;
+  }
+  header hgroup .job-title {
+    font-size: 4em;
+  }
 }

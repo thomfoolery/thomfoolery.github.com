@@ -1,97 +1,119 @@
-/*
- * TEST 1
- * ======
- *   testing the use of basic classes
- */
-var canvas, ctx, canvasWidth, canvasHeight;
+Modernizr.load({
+  load: [
 
-window.onload = init;
+    "/js/classes/Point.js",
 
-// INIT
-function init () {
-	
-	canvas			= document.getElementById('stage');
-	canvas.width	= canvasWidth	= window.innerWidth;
-	canvas.height	= canvasHeight	= window.innerHeight;
-	
-	setup();
-}
+    "/js/decorators/Swim.js",
+    "/js/decorators/Flock.js",
+    "/js/decorators/Contain.js",
+    "/js/decorators/ColorShift.js"
 
-var points		= Math.ceil( Math.random() * 10 ),
-	circles		= Math.ceil( Math.random() * 10 ),
-	balls		= Math.ceil( Math.random() * 10 ),
-	
-	gravity		= 10,
-	friction	= .95,
-	
-	i;
+  ],
+  complete: function () {
 
-function setup () {
-	
-	ctx = canvas.getContext('2d');
-	
-	var opt;
-	
-	i = points, points = [];
-	while ( i-- ){
-		
-		opt = { 'x':		Math.round( Math.random() * canvasWidth ),
-				'y':		Math.round( Math.random() * canvasHeight ),
-				'color':	'rgb(' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ')' };
-		
-		points[ i ] = new Point( opt );
-	}
-	
-	i = circles, circles = [];
-	while ( i-- ){
-		
-		opt = { 'x':		Math.round( Math.random() * canvasWidth ),
-				'y':		Math.round( Math.random() * canvasHeight ),
-				'radius':	Math.ceil( Math.random() * 25 ),
-				'color':	'rgb(' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ')' };
-		
-		circles[ i ] = new Circle( opt );
-	}
-	
-	i = balls, balls = [];
-	while ( i-- ){
-		
-		opt = { 'x':		Math.round( Math.random() * canvasWidth ),
-				'y':		Math.round( Math.random() * canvasHeight ),
-				'speed':	Math.round( Math.random() * 900 ) + 100,
-				'angle':	Math.round( Math.random() * 360 ),
-				'gravity':	gravity,
-				'friction':	friction,
-				'color':	'rgb(' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ', ' + Math.round( Math.random() * 255 ) + ')' };
-		
-		balls[ i ] = new Ball( opt );
-	}
-	
-	ANIMATOR.start();
-}
+    var time      = ( new Date ).getTime()
+      , $canvas   = TBY.$canvas
+      , ctx       = TBY.context
 
-function ANIMATE ( timeToCall ) {
-	
-	var time = ( new Date ).getTime(),
-		timeElapsed = 
-		
-	
-	ctx.clearRect ( 0, 0, canvasWidth, canvasHeight );
-	
-	i = points.length;
-	while ( i-- ){
-		
-		points[ i ].draw();
-	}
-	
-	i = circles.length;
-	while ( i-- ){
-		
-		circles[ i ].draw();
-	}
-	
-	i = balls.length;
-	while ( i-- ){
-		balls[ i ].update( timeToCall );
-	}
-}
+      , MAX_ENTITIES = 100
+      , entities = []
+      , entity_radius = 5
+      , entities_per_round = 5
+
+      , interval_addEntity
+      , interval_addEntity_duration = 1000
+      ;
+
+
+    function resize ( e ) {
+      entities = []
+    }
+    window.addEventListener('resize', resize );
+
+    // * - * - * -  * //
+    // CLEAR          //
+    // * - * - * -  * //
+    ctx.canvas.width = ctx.canvas.width;
+
+
+    // * - * - * -  * //
+    // SETUP          //
+    // * - * - * -  * //
+    addEntity();
+    function addEntity () {
+
+      for ( var i = 0; i < entities_per_round; i++ ) {
+
+        var entity
+          , props
+          , dir = Math.round( Math.random() * 360 )
+
+          , flockOptions = {
+              "entities": entities,
+              "seperation": 20,
+              "cohersion": 100
+            }
+          ;
+
+        props = {
+          x:      0,
+          y:      0,
+          vx:     -1,
+          vy:     -1,
+          dir:    dir,
+          color: { h:  160 + Math.round( Math.random() * 100 ), s: '50%', l: '50%' },
+          radius: entity_radius
+        };
+
+        entity = new Point( ctx, props );
+        entity = TBY.decorate( entity, ColorShift );
+        entity = TBY.decorate( entity, Contain );
+        entity = TBY.decorate( entity, Flock, flockOptions );
+        entity = TBY.decorate( entity, Swim );
+
+        if ( entities.length > MAX_ENTITIES ) delete entities.shift();
+        entities.push( entity );
+      }
+    }
+
+    interval_addEntity = setInterval( addEntity, interval_addEntity_duration );
+
+
+    // * - * - * -  * //
+    // MAIN DRAW LOOP //
+    // * - * - * -  * //
+    draw( 0 );
+    function draw ( timeDelta ) {
+
+      //console.log( timeDelta );
+
+      if ( timeDelta > 200 )
+        return next();
+
+      ctx.fillStyle = "rgba(0,0,0,.05)";
+      ctx.fillRect( 0, 0, ctx.canvas.width, ctx.canvas.width );
+
+      for ( var i = 0, len = entities.length; i < len; i++ ) {
+        ctx.save();
+          entities[ i ].update( timeDelta );
+          entities[ i ].draw();
+        ctx.restore();
+      }
+
+      next();
+    }
+
+    function next () {
+      window.requestAnimationFrame( function() { var Time = ( new Date ).getTime(), delta = Time - time; time = Time; draw( delta ); });
+    }
+
+
+    // * - * - * -  * //
+    // UNLOAD         //
+    // * - * - * -  * //
+    TBY.unload = function () {
+      delete entities;
+      clearInterval( interval_addEntity );
+    };
+  }
+});

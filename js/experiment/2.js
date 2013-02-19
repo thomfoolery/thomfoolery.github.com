@@ -1,167 +1,99 @@
-var numberOfParticles = 15,
-    particles = [],
+Modernizr.load({
+  load: [
 
-    CLEAR_ON_FRAME = false,
-    FRAME_FILL_OPACITY = .25,
+  ],
+  complete: function () {
 
-    GRAVITY = 10, 				// px / sec
-    FRICTION = .9,
-    FLOOR_FRICTION = 2
-    ;
+    var time      = ( new Date ).getTime()
+      , $canvas   = TBY.$canvas
+      , ctx       = TBY.context
+      ;
 
-// on mouse down
-$( window ).mousedown(function( e ){
-    var i = particles.length;
-    while ( i-- ){
-        particles[ i ].speed += Math.random() * 10  + 1;
-        particles[ i ].angle += 270; // up
-    }
-});
 
-function start_ex_2(){
+    // * - * - * -  * //
+    // CLEAR          //
+    // * - * - * -  * //
+    ctx.canvas.width = ctx.canvas.width;
 
-    // create particles
-    var i = numberOfParticles;
-    while ( i-- ){
-        particles[ i ] = new Particle({
-            x: canvasWidth / 2,
-            y: canvasHeight / 2,
-            color: 'rgb(255,0,0)',
-            radius: Math.random() * 5 + 5,
-            angle: Math.random() * 360,
-            speed: Math.random() * 10 + 1
-        });
-    }
 
-    ANIMATOR.start();
-}
+    // * - * - * -  * //
+    // SETUP          //
+    // * - * - * -  * //
 
-function ANIMATE( timeLapsed ){
 
-    if ( CLEAR_ON_FRAME ) { ctx.clearRect( 0, 0, ctx.canvas.width, ctx.canvas.height ); }
+    // * - * - * -  * //
+    // MAIN DRAW LOOP //
+    // * - * - * -  * //
+    var i = 0,
+        x = 360;
 
-    ctx.fillStyle = 'rgba(0,0,0,' + FRAME_FILL_OPACITY + ')';
-    ctx.fillRect( 0, 0, ctx.canvas.width, ctx.canvas.height );
+    draw( 0 );
+    function draw ( timeDelta ) {
 
-    var i = particles.length;
-    while ( i-- ){
-        particles[ i ].update( timeLapsed );
-        particles[ i ].draw();
-    }
-}
+      //console.log( timeDelta );
 
-function Particle( properties ){
+      i %= x;
 
-    this.x = 0;
-    this.y = 0;
+      if ( timeDelta > 200 ) return next(); // EXIT
 
-    this.color = 'rgb(255,0,0)';
-    this.highlightColor = 'rgb(255,255,255)';
-    this.lineWidth = 5;
+      ctx.save();
 
-    this.radius = 10;
-    this.angle = 0;
-    this.vel = { x: 0, y: 0 };
-    this.speed = 0;
-    this.isHighlighted = false;
+        var boxWidth = ctx.canvas.height / 4;
 
-    $.extend( this, properties );
+        ctx.translate( ctx.canvas.width / 2, ctx.canvas.height / 4 );
+        ctx.rotate( Math.PI / 4 );
 
-        // convert angle to velocity vector
-    this.vel.x = this.speed * Math.cos( degToRad( this.angle ) );
-    this.vel.y = this.speed * Math.sin( degToRad( this.angle ) );
+        var grad = ctx.createLinearGradient( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
+        grad.addColorStop(0,'hsl(' + i + ',50%,50%)');
+        grad.addColorStop(1,'hsl(' + ( i + 50 ) + ',50%,50%)');
 
-    this.update = function( timeLapsed ){
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowColor = 'black';
+        ctx.shadowBlur = 25;
 
-        var timeLapsePercent 	= timeLapsed / 1000,
-            gravity 					= GRAVITY * timeLapsePercent,
-            friction 					= 1 - FRICTION * timeLapsePercent,
-            floorFriction 		= 1 - FLOOR_FRICTION * timeLapsePercent;
+        ctx.fillStyle = grad;
+        ctx.fillRect( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
 
-            // convert angle to velocity vector
-        this.vel.x = this.speed * Math.cos( degToRad( this.angle ) );
-        this.vel.y = this.speed * Math.sin( degToRad( this.angle ) );
+      ctx.restore();
 
-        this.contain()
-            // apply GRAVITY
-        this.vel.y += gravity;
+      ctx.save();
 
-            // recalculate speed and angle;
-        this.speed = Math.sqrt( ( this.vel.x * this.vel.x ) + ( this.vel.y * this.vel.y ) );
-        this.angle = radToDeg( Math.atan2( this.vel.y, this.vel.x ) );
+        ctx.translate( ctx.canvas.width / 2, ctx.canvas.height / 4 );
+        ctx.rotate( Math.PI / 4 );
 
-            // apply FRICTION
-        this.speed *= friction;
-            // apply FLOOR FRICTION
-        if ( this.y === canvasHeight - ( this.radius + ( this.lineWidth / 2 ) ) ){
-            this.vel.x *= floorFriction;
-        }
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, boxWidth, boxWidth );
 
-             // apply velocity vector
-        this.x += this.vel.x;
-        this.y += this.vel.y;
+      ctx.restore();
 
-            // is mouse over?
-        this.isMouseOver();
+      ctx.save();
+
+        boxWidth = ctx.canvas.height / 16;
+
+        ctx.translate( ctx.canvas.width / 2, ( ctx.canvas.height / 8 ) * 3 );
+        ctx.rotate( Math.PI / 4 );
+
+        ctx.fillStyle = grad;
+        ctx.fillRect( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
+
+      ctx.restore();
+
+      i += .25;
+
+      next();
     }
 
-    this.contain = function() {
-            // left wall
-        if ( this.x < this.radius + ( this.lineWidth / 2 ) ){
-            this.x = this.radius + ( this.lineWidth / 2 );
-            this.vel.x *= -1;
-        }
-            // ceiling
-        if ( this.y < 0 + this.radius + ( this.lineWidth / 2 ) ) {
-            this.y = 0 + this.radius + ( this.lineWidth / 2 );
-            this.vel.y *= -1;
-        }
-            // right wall
-        if ( this.x > ctx.canvas.width - ( this.radius - ( this.lineWidth / 2 ) ) ){
-            this.x = ctx.canvas.width - this.radius - ( this.lineWidth / 2 );
-            this.vel.x *= -1;
-        }
-            // floor
-        if ( this.y > canvasHeight - ( this.radius + ( this.lineWidth / 2 ) ) ){
-            this.y = canvasHeight - this.radius - ( this.lineWidth / 2 );
-            this.vel.y *= -.9;
-        }
+    function next () {
+      window.requestAnimationFrame( function() { var Time = ( new Date ).getTime(), delta = Time - time; time = Time; draw( delta ); });
     }
 
-    this.isMouseOver = function(){
-            // is mouse over?
-        if ( mouseX >= this.x - this.radius
-            && mouseX <= this.x + this.radius
-            && mouseY >= this.y - this.radius
-            && mouseY <= this.y + this.radius ){
 
-            this.isHighlighted = true;
-        }
-        else{
-            this.isHighlighted = false;
-        }
-    }
+    // * - * - * -  * //
+    // UNLOAD         //
+    // * - * - * -  * //
+    TBY.unload = function () {
 
-    this.draw = function(){
-
-        ctx.lineWidth = this.lineWidth;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = ( this.isHighlighted ) ? this.highlightColor : this.color ;
-
-        ctx.beginPath();
-
-                // vertical line
-            ctx.moveTo( this.x, this.y - this.radius );
-            ctx.lineTo( this.x, this.y + this.radius );
-            ctx.stroke();
-
-                // horizontal line
-            ctx.moveTo( this.x - this.radius, this.y );
-            ctx.lineTo( this.x + this.radius, this.y );
-            ctx.stroke();
-
-        ctx.closePath();
     };
-}
-
-start_ex_2();
+  }
+});
