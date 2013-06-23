@@ -36,7 +36,7 @@ var TBY = TBY || {};
       TBY.unload();
 
     $script = document.createElement('script');
-    $script.src = '/js/experiment/' + hash.split('#').pop() + '.js';
+    $script.src = 'js/experiment/' + hash.split('#').pop() + '.js';
     document.querySelector('head').appendChild( $script );
   }
   window.addEventListener('hashchange', readHash );

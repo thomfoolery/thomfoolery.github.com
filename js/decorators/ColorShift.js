@@ -1,23 +1,23 @@
-function ColorShift ( base ) {
+function ColorShift ( base, options ) {
 
   var ColorShift = Object.create( base )
     , props = ColorShift.properties
-    ;
+    , options = options || {}
 
-  props.color.a = props.color.h;
-  props.color.v = 1;
+    , range     = options.range || 100
+    , alpha     = props.color.h
+    , direction = 1
+    ;
 
   ColorShift.update = function ( timeDelta ) {
 
     var props = this.properties;
 
-    if ( props.color.h +1 > props.color.a +50 )
-      props.color.v *= -1;
+    if ( props.color.h +1 > alpha + (range/2)
+      || props.color.h -1 < alpha - (range/2) )
+      direction *= -1;
 
-    else if ( props.color.h -1 < props.color.a -50 )
-      props.color.v *= -1;
-
-    props.color.h += props.color.v;
+    props.color.h += direction;
 
     base.update.call( this, timeDelta );
   }

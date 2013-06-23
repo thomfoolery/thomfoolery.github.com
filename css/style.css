@@ -58,29 +58,29 @@
 }
 @font-face {
   font-family: 'Ostrich Bold';
-  src: url('/fonts/ostrich/ostrich-bold-webfont.eot');
-  src: url('/fonts/ostrich/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('/fonts/ostrich/ostrich-bold-webfont.woff') format('woff'), /* Modern Browsers */
-   url('/fonts/ostrich/ostrich-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('/fonts/ostrich/ostrich-bold-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  src: url('../fonts/ostrich/ostrich-bold-webfont.eot');
+  src: url('../fonts/ostrich/ostrich-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/ostrich/ostrich-bold-webfont.woff') format('woff'), /* Modern Browsers */
+   url('../fonts/ostrich/ostrich-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/ostrich/ostrich-bold-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
   /* Legacy iOS */
 }
 @font-face {
   font-family: 'Ostrich Black';
-  src: url('/fonts/ostrich/ostrich-black-webfont.eot');
-  src: url('/fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('/fonts/ostrich/ostrich-black-webfont.woff') format('woff'), /* Modern Browsers */
-   url('/fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('/fonts/ostrich/ostrich-black-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  src: url('../fonts/ostrich/ostrich-black-webfont.eot');
+  src: url('../fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/ostrich/ostrich-black-webfont.woff') format('woff'), /* Modern Browsers */
+   url('../fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/ostrich/ostrich-black-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
   /* Legacy iOS */
 }
 @font-face {
   font-family: 'Blackout Sunrise';
-  src: url('/fonts/blackout/blackout_sunrise-webfont.eot');
-  src: url('/fonts/blackout/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('/fonts/blackout/blackout_sunrise-webfont.woff') format('woff'), /* Modern Browsers */
-   url('/fonts/blackout/blackout_sunrise-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-   url('/fonts/blackout/blackout_sunrise-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
+  src: url('../fonts/blackout/blackout_sunrise-webfont.eot');
+  src: url('../fonts/blackout/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/blackout/blackout_sunrise-webfont.woff') format('woff'), /* Modern Browsers */
+   url('../fonts/blackout/blackout_sunrise-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../fonts/blackout/blackout_sunrise-webfont.svg#svgFontName') format('svg');/* IE9 Compat Modes */
   /* Legacy iOS */
 }
 .L-row {

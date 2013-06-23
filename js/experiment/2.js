@@ -1,14 +1,52 @@
-Modernizr.load({
+  Modernizr.load({
   load: [
+
+    "js/utils/trig.js",
+
+    "js/classes/Entity.js",
+    "js/classes/Vector.js",
+
+    "js/decorators/Move.js",
+    "js/decorators/Flock.js",
+    "js/decorators/Avoid.js",
+    "js/decorators/Attract.js",
+    "js/decorators/Contain.js",
+    "js/decorators/ColorShift.js"
 
   ],
   complete: function () {
 
-    var time      = ( new Date ).getTime()
-      , $canvas   = TBY.$canvas
-      , ctx       = TBY.context
+    var time    = ( new Date ).getTime()
+      , $canvas = TBY.$canvas
+      , ctx     = TBY.context
+
+      , MOUSE = {
+          "properties": {
+            "position": new Vector()
+          }
+        }
+
+      , predator
+
+      , MAX_ENTITIES = 50
+      , entities = []
+      , entity_radius = 5
+      , entities_per_round = 50
+      , round_duration = 1000
+
+      , totalTimeLapsed = 0
       ;
 
+    // function mousemove ( e ) {
+    //   MOUSE.properties.position.x = e.clientX;
+    //   MOUSE.properties.position.y = e.clientY;
+    // }
+    // window.addEventListener('mousemove', mousemove );
+
+    function resize ( e ) {
+      entities = []
+    }
+    window.addEventListener('resize', resize );
 
     // * - * - * -  * //
     // CLEAR          //
@@ -20,66 +58,113 @@ Modernizr.load({
     // SETUP          //
     // * - * - * -  * //
 
+    predator = new Entity( ctx, {
+      "position": new Vector(
+        ctx.canvas.width  / 2,
+        ctx.canvas.height / 4,
+        0
+      ),
+      "color": {
+        "h":  20,
+        "s": '80%',
+        "l": '50%'
+      },
+      "radius": 10
+    });
+
+    predator = TBY.decorate( predator, Contain, {
+      avoid: true
+    });
+    predator = TBY.decorate( predator, Attract, {
+      target: MOUSE,
+      distance: 100
+    });
+    predator = TBY.decorate( predator, Move, {
+      "direction":  Math.round( Math.random() * 360 ),
+      "swim":      true,
+      "descision": 1000
+    });
+
+    function spawnRound () {
+
+      for ( var i = 0; i < entities_per_round; i++ ) {
+
+        var props
+          , entity
+          , direction = new Vector (
+               1, //Math.cos( Math.PI * 2 / entities_per_round * i ),
+               0, //Math.sin( Math.PI * 2 / entities_per_round * i ),
+               0
+            ).heading( true )
+          , offset = Math.random()
+          ;
+
+        props = {
+          "position": new Vector(
+            ( ctx.canvas.width  / 2 ) + Math.cos( Math.PI * 2 / entities_per_round * i ) * 40,
+            ( ctx.canvas.height / 4 ) + Math.sin( Math.PI * 2 / entities_per_round * i ) * 40,
+            0
+          ),
+          "color": {
+            "h": 160 + Math.round( Math.random() * 100 ),
+            "s": '50%',
+            "l": '50%'
+          },
+          "radius": entity_radius
+        };
+
+        // NEW
+        entity = new Entity( ctx, props );
+        // color shift
+        entity = TBY.decorate( entity, ColorShift );
+        // contain
+        entity = TBY.decorate( entity, Contain, {
+          wrap: true
+        });
+        // avoid
+        entity = TBY.decorate( entity, Avoid, {
+          "obsticle": predator,
+          "distance": 100
+        });
+        // flock
+        entity = TBY.decorate( entity, Flock, {
+          "neighbours": entities
+        });
+        // move
+        entity = TBY.decorate( entity, Move, {
+          "direction": direction
+        });
+
+        entities.push( entity );
+      }
+    }
+    spawnRound();
+
 
     // * - * - * -  * //
     // MAIN DRAW LOOP //
     // * - * - * -  * //
-    var i = 0,
-        x = 360;
-
     draw( 0 );
     function draw ( timeDelta ) {
 
-      //console.log( timeDelta );
+      if ( timeDelta > 200 )
+        return next();
 
-      i %= x;
-
-      if ( timeDelta > 200 ) return next(); // EXIT
-
-      ctx.save();
-
-        var boxWidth = ctx.canvas.height / 4;
-
-        ctx.translate( ctx.canvas.width / 2, ctx.canvas.height / 4 );
-        ctx.rotate( Math.PI / 4 );
-
-        var grad = ctx.createLinearGradient( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
-        grad.addColorStop(0,'hsl(' + i + ',50%,50%)');
-        grad.addColorStop(1,'hsl(' + ( i + 50 ) + ',50%,50%)');
-
-        ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 0;
-        ctx.shadowColor = 'black';
-        ctx.shadowBlur = 25;
-
-        ctx.fillStyle = grad;
-        ctx.fillRect( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
-
-      ctx.restore();
+      totalTimeLapsed += timeDelta;
+      totalTimeLapsed %= round_duration;
 
       ctx.save();
-
-        ctx.translate( ctx.canvas.width / 2, ctx.canvas.height / 4 );
-        ctx.rotate( Math.PI / 4 );
-
-        ctx.fillStyle = 'black';
-        ctx.fillRect( 0, 0, boxWidth, boxWidth );
-
+        ctx.fillStyle = "rgba(0,0,0,.05)";
+        ctx.fillRect( 0, 0, ctx.canvas.width, ctx.canvas.width );
       ctx.restore();
 
-      ctx.save();
+      for ( var i = 0, len = entities.length; i < len; i++ ) {
+        entities[ i ].update( timeDelta );
+        entities[ i ].draw();
+      }
 
-        boxWidth = ctx.canvas.height / 16;
-
-        ctx.translate( ctx.canvas.width / 2, ( ctx.canvas.height / 8 ) * 3 );
-        ctx.rotate( Math.PI / 4 );
-
-        ctx.fillStyle = grad;
-        ctx.fillRect( -boxWidth / 2, -boxWidth / 2, boxWidth, boxWidth );
-
-      ctx.restore();
-
-      i += .25;
+      predator.update( timeDelta );
+      predator.draw();
 
       next();
     }
@@ -93,7 +178,8 @@ Modernizr.load({
     // UNLOAD         //
     // * - * - * -  * //
     TBY.unload = function () {
-
+      delete entities;
+      clearInterval( interval_addEntity );
     };
   }
 });
