@@ -8,498 +8,554 @@
     <head>
 
         <meta charset="utf-8">
-
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title>Thomas Benjamin Yuill - Front End Architect & Engineer</title>
+
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
         <meta name="description" content="The personal curriculum vit&aelig; of a diversified web developer based out of Toronto, Canada.">
         <meta name="author" content="Thomas Yuill">
 
-        <meta property="og:title" content="Thomas Yuill :: Front End Architect & Web Developer" />
-        <meta property="og:image" content="http://thom-foolery.com/img/bolt.png" />
+        <meta property="og:title" content="Thomas Yuill :: Web Architect & Web Developer" />
+        <meta property="og:image" content="http://thom-foolery.com/img/touch/apple-touch-icon-144x144-precomposed.png" />
         <meta property="og:description" content="The personal curriculum vit&aelig; of a diversified web developer based out of Toronto, Canada." />
         <meta property="og:url" content="http://thom-foolery.com">
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
 
-        <!-- TO DO ::
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#000000">
 
-        <link rel="stylesheet" type="text/css" href="css/style.minimal.css" id="main-style">
-        <!--[if (gte IE 6)&(lte IE 8)]><script src="selectivizr-min.js"></script><![endif]-->
-        <script src="js/libs/modernizr.min.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="css/main.css" id="main-style">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="loading">
+        <!--[if lt IE 9]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+        <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
 
-
-      <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
-
-        <header>
-            <hgroup class="page-title">
-                <h1 class="full-name">Thomas Benjamin Yuill</h1>
-                <h2 class="job-title">Front End Architect &amp; Engineer</h2>
-            </hgroup>
+        <!-- HEADER -->
+        <header class="page-title">
+                <h1>
+                    <span class="full-name">Thomas Benjamin Yuill</span>
+                    <span class="job-title">Web Architect &amp; Engineer</span>
+                </h1>
         </header>
 
-        <!-- WRAP -->
-        <div id="wrap">
+        <nav id="top-nav">
+            <div class="top-nav_title">
+                My
+            </div>
 
-            <nav id="top-nav">
-                <h2>My</h2>
+            <ul>
+                <li>
+                    <a href="#experience" class="experience">
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="#education" class="education">
+                        Education
+                    </a>
+                </li>
+                <li>
+                    <a href="#knowledge" class="knowledge">
+                        Knowledge
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="contact">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.pdf">
+                        R&eacute;sum&eacute;
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-                <ul>
-                    <li>
-                        <a href="#experience" class="experience">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#education" class="education">Education</a>
-                    </li>
-                    <li>
-                        <a href="#knowledge" class="knowledge">Knowledge</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="resume.pdf">R&eacute;sum&eacute;</a>
-                    </li>
-                </ul>
-            </nav>
+        <!-- MAIN -->
+        <div id="main" role="main">
 
+            <!-- Map -->
+            <section id="location">
+                <div class="map-container">
+                    <div id="map-canvas"></div>
+                </div>
+                <p>
+                    Currently located in Toronto, Ontario Canada.
+                </p>
+            </section>
 
-            <!-- MAIN -->
-            <div id="main" role="main">
+            <!-- Work Experience -->
+            <section id="experience">
+                <h2 class="primary heading">
+                    <a href="#experience">Experience</a>
+                </h2>
 
-                <!-- Map -->
-                <section id="location">
-                    <div class="map-container">
-                        <div id="map-canvas"></div>
+                <!-- TheRedPin.com -->
+                <article class="current job">
+                    <div class="sub heading">
+                        <h3 class="first-heading employer">TheRedPin.com Realty</h3>
+                        <div class="second-heading job-title">Senior User Interface Developer</div>
+                        <div class="third-heading duration">August 2012 - Present</div>
                     </div>
-                    <p>
-                        Currently located in Toronto, Ontario Canada.
-                    </p>
-                </section>
 
-                <!-- Work Experience -->
-                <section id="experience">
-                    <h1 class="primary heading"><a href="#experience">Experience</a></h1>
+                    <div class="description">
 
-                    <!-- Critical Mass -->
-                    <article class="current job">
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading employer">Critical Mass</h2>
-                            <h3 class="second-heading job-title">Senior Developer</h3>
-                            <h4 class="third-heading duration">November 2010 - Present</h4>
-                        </hgroup>
+                        <p>
+                            Currently I am responsible for crafting the front-end framework and design of TheRedPin.com. Working
+                            closely with the designers and product owners Thomas has refreshed the user interface and property
+                            mapping capabilities of TheRedPin with agile and responsive methodologies. Recently the front-end
+                            was re-factored to take advantage of Backbone.js' low level MVC patterns and provide a robust and
+                            future friendly development environment.
+                        </p>
 
-                        <div class="body">
+                        <p>
+                            Responsibilities include writing semantic HTML 5, progressive and responsive CSS, accessible web pages,
+                            mobile optimizations, reusable user interface components, modular and object oriented JavaScript with
+                            the jQuery framework, and the thoughtful use of proven development design patterns within the
+                            development of front end architecture.
+                        </p>
 
-                            <div class="copy">
+                    </div>
 
-                                <p>
-                                    Currently I am responsible for directing my team members in the front end development and
-                                    maintenance of high profile commercial web sites. Due to the high volume of traffic visiting
-                                    these sites the use of thoughtful design and development practices are a necessity to ensure
-                                    the smooth and timely delivery of project milestones. I ensure my team members adhere to
-                                    currently accepted web standards as closely as possible to satisfy the widest range of
-                                    user agents and devices.
-                                </p>
+                </article>
 
-                                <p>
-                                    Responsibilities include writing semantic HTML, progressive and responsive CSS, accessible web pages,
-                                    mobile functionality, reusable user interface components, modular and object oriented JavaScript with
-                                    the jQuery framework, Unit testing, and the thoughtful use of proven development design patterns
-                                    within the development of front end architecture.
-                                </p>
+                <!-- Critical Mass -->
+                <article class="current job">
+                    <div class="sub heading">
+                        <h3 class="first-heading employer">Critical Mass</h3>
+                        <div class="second-heading job-title">Senior Developer</div>
+                        <div class="third-heading duration">November 2010 - August 2012</div>
+                    </div>
 
-                            </div>
+                    <div class="description">
 
-                        </div>
+                        <p>
+                            Responsible for directing team members in the front end development and
+                            maintenance of high profile commercial web sites. Due to the high volume of traffic visiting
+                            these sites the use of thoughtful design and development practices are a necessity to ensure
+                            the smooth and timely delivery of project milestones. I ensure my team members adhere to
+                            currently accepted web standards as closely as possible to satisfy the widest range of
+                            user agents and devices.
+                        </p>
 
-                    </article>
+                        <p>
+                            Responsibilities include writing semantic HTML, progressive and responsive CSS, accessible web pages,
+                            mobile functionality, reusable user interface components, modular and object oriented JavaScript with
+                            the jQuery framework, Unit testing, and the thoughtful use of proven development design patterns
+                            within the development of front end architecture.
+                        </p>
 
-                    <!-- CBC -->
-                    <article class="job">
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading employer">Canadian Broadcasting Center</h2>
-                            <h3 class="second-heading job-title">User Interface Developer</h3>
-                            <h4 class="third-heading duration">September 2009 - November 2010</h4>
-                        </hgroup>
+                    </div>
 
-                        <div class="body">
+                    <ul class="projects">
 
-                            <div class="copy">
+                        <li>
+                            <a href="http://www.infiniti.com/" target="_blank">
+                                <img src="/img/showcase/thumb/infiniti.com.jpg" alt="screenshot of the infiniti.com home page">
+                            </a>
+                            <strong>Infiniti.com global redesign</strong>
+                            <p>HTML and JS interface</p>
+                            <a href="http://www.infiniti.com/" target="_blank">www.infiniti.com</a>
+                        </li>
 
-                                <p>
-                                    Responsible for the front end development and maintenance of a large multimedia publication system.
-                                    Working within a team environment we instituted web standards and guidelines across the Canadaian
-                                    Broadcasting Corporation for the corporations satellite web teams to adhere to.
-                                </p>
+                        <li>
+                            <a href="http://www.miteam.adidas.com/" target="_blank">
+                                <img src="/img/showcase/thumb/adidas.miteam.jpg" alt="screenshot of the Adidas' miteam product configurator">
+                            </a>
+                            <strong>Adidas' miteam HTML5 product configurator</strong>
+                            <p>Various JS components</p>
+                            <a href="http://www.miteam.adidas.com/" target="_blank">www.miteam.adidas.com</a>
+                        </li>
 
-                                <p>
-                                    Responsibilities included writing semantic HTML, progressive CSS, re-usable user interface components,
-                                    fulfilling accessibility requirments, utilizing modular and object oriented JavaScript with the
-                                    YUI 3 framework, cross browser compatibility testing, leveraging server side includes, PHP, JAVA,
-                                    and an understanding the Unix / Apache Web Server environments.
-                                </p>
+                        <li>
+                            <a href="http://www.scotiabank.com/gls/en/index.html?NoRedirect=true#insurance" target="_blank">
+                                <img src="/img/showcase/thumb/scotia.bank.global.jpg" alt="screenshot of the Scotia bank global home page">
+                            </a>
+                            <strong>Scotia bank global responsive site</strong>
+                            <p>Responsive HTML/CSS layouts and various JS components</p>
+                            <a href="http://www.scotiabank.com/gls/en/index.html?NoRedirect=true#insurance" target="_blank">www.scotiabank.com</a>
+                        </li>
 
-                            </div>
+                        <li>
+                            <a href="https://scotiarewards.scotiabank.com/" target="_blank">
+                                <img src="/img/showcase/thumb/scotia.bank.rewards.jpg" alt="screenshot of the Scotia bank rewards home page">
+                            </a>
+                            <strong>Scotia bank rewards responsive site</strong>
+                            <p>Responsive HTML/CSS layouts and various JS components</p>
+                            <a href="https://scotiarewards.scotiabank.com/" target="_blank">scotiarewards.scotiabank.com</a>
+                        </li>
 
-                            <ul class="projects">
-                                <li>
-                                    <a href="http://www.cbc.ca/video/" target="_blank">
-                                        <img src="/img/showcase/thumb/cbc-player.jpg" alt="screenshot of the CBC.ca Media Player home page">
-                                    </a>
-                                    <strong>the Consolidated Media Player</strong>
-                                    HTML and JS interface
-                                    <a href="http://www.cbc.ca/video/" target="_blank">www.cbc.ca/video/</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.cbc.ca/thenational/" target="_blank">
-                                        <img src="/img/showcase/thumb/cbc-the-national.jpg" alt="screenshot of the CBC.ca the National home page">
-                                    </a>
-                                    <strong>the National: Redesign</strong>
-                                    HTML, CSS and JS UI component development
-                                    <a href="http://www.cbc.ca/thenational/" target="_blank">www.cbc.ca/thenational/</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.cbc.ca/" target="_blank">
-                                        <img src="/img/showcase/thumb/cbc-home.jpg" alt="screenshot of the CBC.ca home page">
-                                    </a>
-                                    <strong>CBC.ca Homepage: Redesign</strong>
-                                    Techincal Specification Document for the landing page
-                                    <a href="http://www.cbc.ca/" target="_blank">www.cbc.ca/</a>
-                                </li>
-                            </ul>
+                    </ul>
 
-                        </div>
+                </article>
 
-                    </article>
+                <!-- CBC -->
+                <article class="job">
+                    <div class="sub heading">
+                        <h3 class="first-heading employer">Canadian Broadcasting Center</h3>
+                        <div class="second-heading job-title">User Interface Developer</div>
+                        <div class="third-heading duration">September 2009 - November 2010</div>
+                    </div>
 
-                    <!-- henderson bas : front end -->
-                    <article class="job">
+                    <div class="description">
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading employer">hendrson bas</h2>
-                            <h3 class="second-heading job-title">Front End Developer</h3>
-                            <h4 class="third-heading duration">June 2008 - September 2009</h4>
-                        </hgroup>
+                        <p>
+                            Responsible for the front end development and maintenance of a large multimedia publication system.
+                            Working within a team environment we instituted web standards and guidelines across the Canadaian
+                            Broadcasting Corporation for the corporations satellite web teams to adhere to.
+                        </p>
 
-                        <div class="body">
+                        <p>
+                            Responsibilities included writing semantic HTML, progressive CSS, re-usable user interface components,
+                            fulfilling accessibility requirments, utilizing modular and object oriented JavaScript with the
+                            YUI 3 framework, cross browser compatibility testing, leveraging server side includes, PHP, JAVA,
+                            and an understanding the Unix / Apache Web Server environments.
+                        </p>
 
-                            <div class="copy">
+                    </div>
 
-                                <p>
-                                    Responsible for the front-end development and maintenance of many large, high traffic,
-                                    commercial websites. Responsibilities include HTML, CSS, JavaScript, and cross browser
-                                    compatibility testing. Required PHP, .NET, ASP and JSP knowledge. I was also the lead
-                                    front end developer for all iCoke.ca deployments.
-                                </p>
+                    <ul class="projects">
+                        <li>
+                            <a href="http://www.cbc.ca/video/" target="_blank">
+                                <img src="/img/showcase/thumb/cbc-player.jpg" alt="screenshot of the CBC.ca Media Player home page">
+                            </a>
+                            <strong>the Consolidated Media Player</strong>
+                            <p>HTML and JS components</p>
+                            <a href="http://www.cbc.ca/video/" target="_blank">www.cbc.ca/video/</a>
+                        </li>
+                        <li>
+                            <a href="http://www.cbc.ca/thenational/" target="_blank">
+                                <img src="/img/showcase/thumb/cbc-the-national.jpg" alt="screenshot of the CBC.ca the National home page">
+                            </a>
+                            <strong>the National: Redesign</strong>
+                            <p>HTML, CSS and JS components</p>
+                            <a href="http://www.cbc.ca/thenational/" target="_blank">www.cbc.ca/thenational/</a>
+                        </li>
+                        <li>
+                            <a href="http://www.cbc.ca/" target="_blank">
+                                <img src="/img/showcase/thumb/cbc-home.jpg" alt="screenshot of the CBC.ca home page">
+                            </a>
+                            <strong>CBC.ca Homepage: Redesign</strong>
+                            <p>Techincal Specification Document for the landing page</p>
+                            <a href="http://www.cbc.ca/" target="_blank">www.cbc.ca/</a>
+                        </li>
+                    </ul>
 
-                            </div>
+                </article>
 
-                            <ul class="projects">
-                                <li>
-                                    <a href="http://www.icoke.ca/" target="_blank">
-                                        <img src="/img/showcase/thumb/icoke.jpg" alt="screenshot of the icoke.ca home page">
-                                    </a>
-                                    <strong>iCoke.ca</strong>
-                                    <a href="http://www.icoke.ca/" target="_blank">www.icoke.ca/</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.molsoncanadian.ca/" target="_blank">
-                                        <img src="/img/showcase/thumb/molson.jpg" alt="screenshot of the MolsonCanadian.ca home page">
-                                    </a>
-                                    <strong>MolsonCanadian.ca Redesign</strong>
-                                    <a href="http://www.molsoncanadian.ca/" target="_blank">www.molsoncanadian.ca/</a>
-                                </li>
-                                <li>
-                                    <img src="/img/showcase/thumb/mega-keg.jpg" alt="screenshot of the MegaKeg.ca home page">
-                                    <strong>Molson Canadian: Mega Keg 2009</strong>
-                                    No Longer Available
-                                </li>
-                                <li>
-                                    <a href="http://www.everycup.ca/" target="_blank">
-                                        <img src="/img/showcase/thumb/every-cup.jpg" alt="screenshot of the EveryCup.ca home page">
-                                    </a>
-                                    <strong>Tim Hortons: EveryCup.ca</strong>
-                                    <a href="http://www.everycup.ca/" target="_blank">www.everycup.ca/</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.sogoactive.com/" target="_blank">
-                                        <img src="/img/showcase/thumb/sogo.jpg" alt="screenshot of the SogoActive.ca home page">
-                                    </a>
-                                    <strong>SogoActive.com</strong>
-                                    <a href="http://www.sogoactive.com/" target="_blank">www.sogoactive.com/</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.nintendo.com/" target="_blank">
-                                        <img src="/img/showcase/thumb/nintendo.jpg" alt="screenshot of the Nintendo.ca home page">
-                                    </a>
-                                    <strong>Nintendo.com</strong>
-                                    <a href="http://www.nintendo.com/" target="_blank">http://www.nintendo.com/</a>
-                                </li>
-                                <li>
-                                    <img src="/img/showcase/thumb/get-up-and-play.jpg" alt="screenshot of the GetUpAndPlay.ca home page">
-                                    <strong>Nintendo: GetUpAndPlay.ca</strong>
-                                    No Longer Available
-                                </li>
-                                <li>
-                                    <a href="http://www.joefresh.com/" target="_blank">
-                                        <img src="/img/showcase/thumb/joe-fresh.jpg" alt="screenshot of the JoeFresh.ca home page">
-                                    </a>
-                                    <strong>JoeFresh.com</strong>
-                                    <a href="http://www.joefresh.com/" target="_blank">www.joefresh.com/</a>
-                                </li>
-                            </ul>
+                <!-- henderson bas : front end -->
+                <article class="job">
 
-                        </div>
+                    <div class="sub heading">
+                        <h3 class="first-heading employer">hendrson bas</h3>
+                        <div class="second-heading job-title">Front End Developer</div>
+                        <div class="third-heading duration">June 2008 - September 2009</div>
+                    </div>
 
-                    </article>
+                    <div class="description">
 
-                    <!-- henderson bas : QA -->
-                    <article class="job">
+                        <p>
+                            Responsible for the front-end development and maintenance of many large, high traffic,
+                            commercial websites. Responsibilities include HTML, CSS, JavaScript, and cross browser
+                            compatibility testing. Required PHP, .NET, ASP and JSP knowledge. I was also the lead
+                            front end developer for all iCoke.ca deployments.
+                        </p>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading employer">hendrson bas</h2>
-                            <h3 class="second-heading job-title">Quality Analyst</h3>
-                            <span class="third-heading duration">September 2007 - June 2008</span>
-                        </hgroup>
+                    </div>
 
-                        <div class="body">
+                    <ul class="projects">
+                        <li>
+                            <a href="http://www.icoke.ca/" target="_blank">
+                                <img src="/img/showcase/thumb/icoke.jpg" alt="screenshot of the icoke.ca home page">
+                            </a>
+                            <strong>iCoke.ca</strong>
+                            <a href="http://www.icoke.ca/" target="_blank">www.icoke.ca/</a>
+                        </li>
+                        <li>
+                            <a href="http://www.molsoncanadian.ca/" target="_blank">
+                                <img src="/img/showcase/thumb/molson.jpg" alt="screenshot of the MolsonCanadian.ca home page">
+                            </a>
+                            <strong>MolsonCanadian.ca Redesign</strong>
+                            <a href="http://www.molsoncanadian.ca/" target="_blank">www.molsoncanadian.ca/</a>
+                        </li>
+                        <li>
+                            <img src="/img/showcase/thumb/mega-keg.jpg" alt="screenshot of the MegaKeg.ca home page">
+                            <strong>Molson Canadian: Mega Keg 2009</strong>
+                            No Longer Available
+                        </li>
+                        <li>
+                            <a href="http://www.everycup.ca/" target="_blank">
+                                <img src="/img/showcase/thumb/every-cup.jpg" alt="screenshot of the EveryCup.ca home page">
+                            </a>
+                            <strong>Tim Hortons: EveryCup.ca</strong>
+                            <a href="http://www.everycup.ca/" target="_blank">www.everycup.ca/</a>
+                        </li>
+                        <li>
+                            <a href="http://www.sogoactive.com/" target="_blank">
+                                <img src="/img/showcase/thumb/sogo.jpg" alt="screenshot of the SogoActive.ca home page">
+                            </a>
+                            <strong>SogoActive.com</strong>
+                            <a href="http://www.sogoactive.com/" target="_blank">www.sogoactive.com/</a>
+                        </li>
+                        <li>
+                            <a href="http://www.nintendo.com/" target="_blank">
+                                <img src="/img/showcase/thumb/nintendo.jpg" alt="screenshot of the Nintendo.ca home page">
+                            </a>
+                            <strong>Nintendo.com</strong>
+                            <a href="http://www.nintendo.com/" target="_blank">http://www.nintendo.com/</a>
+                        </li>
+                        <li>
+                            <img src="/img/showcase/thumb/get-up-and-play.jpg" alt="screenshot of the GetUpAndPlay.ca home page">
+                            <strong>Nintendo: GetUpAndPlay.ca</strong>
+                            No Longer Available
+                        </li>
+                        <li>
+                            <a href="http://www.joefresh.com/" target="_blank">
+                                <img src="/img/showcase/thumb/joe-fresh.jpg" alt="screenshot of the JoeFresh.ca home page">
+                            </a>
+                            <strong>JoeFresh.com</strong>
+                            <a href="http://www.joefresh.com/" target="_blank">www.joefresh.com/</a>
+                        </li>
+                    </ul>
 
-                            <div class="copy">
+                </article>
 
-                                <p>
-                                    Responsible for full cross-browser project testing of <strong>all</strong> digital deployments
-                                    including copy checking along with database, functionality, and security testing.
-                                </p>
+                <!-- henderson bas : QA -->
+                <article class="job">
 
-                            </div>
+                    <div class="sub heading">
+                        <h3 class="first-heading employer">hendrson bas</h3>
+                        <div class="second-heading job-title">Quality Analyst</div>
+                        <div class="third-heading duration">September 2007 - June 2008</div>
+                    </div>
 
-                        </div>
+                    <div class="description">
 
-                    </article>
+                        <p>
+                            Responsible for full cross-browser project testing of <strong>all</strong> digital deployments
+                            including copy checking along with database, functionality, and security testing.
+                        </p>
 
-                </section>
+                    </div>
 
-                <!-- EDUCATION -->
-                <section id="education">
-                    <h1 class="primary heading"><a href="#education">Education</a></h1>
+                </article>
 
-                    <article class="institution">
+            </section>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading institution-title">York University</h2>
-                            <h3 class="second-heading academic-title">Bachelor of Arts: Information Technology</h3>
-                            <h4 class="third-heading duration">2003 - 2007</h4>
-                        </hgroup>
+            <!-- EDUCATION -->
+            <section id="education">
+                <h2 class="primary heading"><a href="#education">Education</a></h1>
 
-                        <div class="body">
+                <article class="institution">
 
-                            <p>
-                                Completed a four year study of Information Technology. Courses included computer science,
-                                network architecture, user interface design, web development, database development,
-                                human and computer interaction, mathematics, algorithms, and social studies.
-                            </p>
+                    <div class="sub heading">
+                        <h3 class="first-heading institution-title">York University</h3>
+                        <div class="second-heading academic-title">Bachelor of Arts: Information Technology</div>
+                        <div class="third-heading duration">2003 - 2007</div>
+                    </div>
 
-                        </div>
+                    <div class="description">
 
-                    </article>
+                        <p>
+                            Completed a four year study of Information Technology. Courses included computer science,
+                            network architecture, user interface design, web development, database development,
+                            human and computer interaction, mathematics, algorithms, and social studies.
+                        </p>
 
-                    <article class="institution">
+                    </div>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading institution-title">Markham District High School</h2>
-                            <h3 class="second-heading academic-title">Final Year OAC Graduate</h3>
-                            <h4 class="third-heading duration">1998 - 2003</h4>
-                        </hgroup>
+                </article>
 
-                        <div class="body">
+                <article class="institution">
 
-                            <p>
-                                Last graduating class of the Ontario Academic Credit (OAC).
-                            </p>
+                    <div class="sub heading">
+                        <h3 class="first-heading institution-title">Markham District High School</h3>
+                        <div class="second-heading academic-title">Final Year OAC Graduate</div>
+                        <div class="third-heading duration">1998 - 2003</div>
+                    </div>
 
-                        </div>
+                    <div class="description">
 
-                    </article>
+                        <p>
+                            Last graduating class of the Ontario Academic Credit (OAC).
+                        </p>
 
-                </section>
+                    </div>
 
-                <!-- SKILLS -->
-                <section id="knowledge" class="clearfix">
-                    <h1 class="primary heading"><a href="#knowledge">Knowledge</a></h1>
+                </article>
 
-                    <article>
+            </section>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading">Technical</h2>
-                        </hgroup>
+            <!-- SKILLS -->
+            <section id="knowledge" class="clearfix">
+                <h2 class="primary heading">
+                    <a href="#knowledge">Knowledge</a>
+                </h1>
 
-                        <div class="body">
-                          <ul class="technical-knowledge">
-                              <li>
-                                  Modular JavaScript
-                              </li>
-                              <li>
-                                  Responsive Layouts
-                              </li>
-                              <li>
-                                  Rapid Prototyping
-                              </li>
-                              <li>
-                                  Semantic HTML 5
-                              </li>
-                              <li>
-                                  Accessibility
-                              </li>
-                              <li>
-                                  YUI & jQuery
-                              </li>
-                              <li>
-                                  CSS 2.1 & 3
-                              </li>
-                              <li>
-                                  UNIX SHELL
-                              </li>
-                              <li>
-                                  SVN & GIT
-                              </li>
-                              <li>
-                                  JSON
-                              </li>
-                              <li>
-                                  YAML
-                              </li>
-                              <li>
-                                  XML
-                              </li>
-                              <li>
-                                  PHP
-                              </li>
-                              <li>
-                                  JAVA
-                              </li>
-                              <li>
-                                  .NET
-                              </li>
-                          </ul>
-                        </div>
+                <article>
 
-                    </article>
+                    <div class="sub heading">
+                        <h2 class="first-heading">Technical</h2>
+                    </div>
 
-                    <article>
+                    <div class="description">
+                      <ul class="knowledge">
+                          <li>
+                              Modular Native JavaScript
+                          </li>
+                          <li>
+                              Responsive Layouts
+                          </li>
+                          <li>
+                              Rapid Prototyping
+                          </li>
+                          <li>
+                              Semantic HTML 5
+                          </li>
+                          <li>
+                              Accessibility
+                          </li>
+                          <li>
+                              jQuery
+                          </li>
+                          <li>
+                              CSS 3
+                          </li>
+                          <li>
+                              Node.js
+                          </li>
+                          <li>
+                              JAVA
+                          </li>
+                          <li>
+                              JSON
+                          </li>
+                          <li>
+                              GIT
+                          </li>
+                          <li>
+                              PHP
+                          </li>
+                      </ul>
+                    </div>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading">Architectural</h2>
-                        </hgroup>
+                </article>
 
-                        <div class="body">
-                          <ul class="architectural-knowledge">
-                              <li>
-                                  User Experience and Interaction Design
-                              </li>
-                              <li>
-                                  Object Oriented Design Patterns
-                              </li>
-                              <li>
-                                  Information Architecture
-                              </li>
-                              <li>
-                                  Technical Documentation
-                              </li>
-                              <li>
-                                  User Testing
-                              </li>
-                              <li>
-                                  Wireframing
-                              </li>
-                          </ul>
-                        </div>
+                <article>
 
-                    </article>
+                    <div class="sub heading">
+                        <h2 class="first-heading">Architectural</h2>
+                    </div>
 
-                    <article>
+                    <div class="description">
+                      <ul class="architectural-knowledge">
+                          <li>
+                              User Experience and Interaction Design
+                          </li>
+                          <li>
+                              Object Oriented Design Patterns
+                          </li>
+                          <li>
+                              Information Architecture
+                          </li>
+                          <li>
+                              Technical Documentation
+                          </li>
+                          <li>
+                              User Testing
+                          </li>
+                          <li>
+                              Wireframing
+                          </li>
+                      </ul>
+                    </div>
 
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading">Design</h2>
-                        </hgroup>
+                </article>
 
-                        <div class="body">
-                          <ul class="design-knowledge">
-                            <li>
-                                User Interface Design
+                <article>
+
+                    <div class="sub heading">
+                        <h2 class="first-heading">Design</h2>
+                    </div>
+
+                    <div class="body">
+                      <ul class="design-knowledge">
+                        <li>
+                            User Interface Design
+                        </li>
+                        <li>
+                            Mobile Design
+                        </li>
+                        <li>
+                            Illustration
+                        </li>
+                        <li>
+                            Form Design
+                        </li>
+                        <li>
+                            Photoshop
+                        </li>
+                        <li>
+                            Doodling
+                        </li>
+                    </ul>
+                  </div>
+
+                </article>
+
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+
+                <h2 class="primary heading">
+                    <a href="#contact">Contact</a>
+                </h2>
+
+                <article>
+
+                    <div class="sub heading">
+                        <div class="first-heading">Thomas Benjamin Yuill</div>
+                        <div class="second-heading">Front End Architect &amp; Engineer</div>
+                        <div class="third-heading">1984 - Present</div>
+                    </div>
+
+                    <div class="body">
+
+                        <p>
+                            Please feel free to contact me in a professional manner about any matter of web development or web design.
+                        </p>
+
+                        <ul>
+                            <li class="contact-email">
+                                <a href="mailto:thomas.yuill@gmail.com" target="_blank" class="email">thomas.yuill@gmail.com</a>
                             </li>
-                            <li>
-                                Mobile Design
+                            <li class="contact-linked-in">
+                                <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn Profile</a>
                             </li>
-                            <li>
-                                Illustration
-                            </li>
-                            <li>
-                                Form Design
-                            </li>
-                            <li>
-                                Photoshop
-                            </li>
-                            <li>
-                                Doodling
+                            <li class="contact-twitter">
+                                <a href="https://twitter.com/PrttyGrtty" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @PrttyGrtty</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                             </li>
                         </ul>
-                      </div>
 
-                    </article>
+                    </div>
 
-                </section>
+                </article>
 
-                <!-- CONTACT -->
-                <section id="contact">
-
-                    <h1 class="primary heading">
-                        <a href="#contact">Contact</a>
-                    </h1>
-
-                    <article>
-
-                        <hgroup class="sub heading">
-                            <h2 class="first-heading">Thomas Benjamin Yuill</h2>
-                            <h3 class="second-heading">Front End Architect &amp; Engineer</h3>
-                            <h4 class="third-heading">1984 - Present</h4>
-                        </hgroup>
-
-                        <div class="body">
-
-                            <p>
-                                Please feel free to contact me in a professional manner about any matter of web development or web design.
-                            </p>
-
-                            <ul>
-                                <li class="contact-email">
-                                    <a href="mailto:thomas.yuill@gmail.com" target="_blank" class="email">thomas.yuill@gmail.com</a>
-                                </li>
-                                <li class="contact-linked-in">
-                                    <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn Profile</a>
-                                </li>
-                                <li class="contact-twitter">
-                                    <a href="https://twitter.com/PrttyGrtty" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @PrttyGrtty</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </article>
-
-                </section>
-
-            </div>
+            </section>
 
         </div>
 
@@ -507,55 +563,53 @@
             Designed and Developed by <strong>Thomas Yuill</strong> &copy; 2012
         </footer>
 
-        <!-- FOR LATER USE
-        <div class="quotes">
-            <p class="quote" data-origin="Brian Elton">
-                <sup>&ldquo;</sup>
-                Thomas has a thirst for knowledge ...
-                He is up for any challenge you put in front of him ...
-                <sub>&rdquo;</sub>
-                <small>
-                    - Brian Elton, developer<br/>
-                    <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
-                </small>
-            </p>
-            <p class="quote" data-origin="Dmitri Farkov">
-                <sup>&ldquo;</sup>
-                Thomas is a talented developer with a knack for developing graphically and
-                functionally rich web applications...
-                <sub>&rdquo;</sub>
-                <small>
-                    - Dmitri Farkov, developer<br/>
-                    <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
-                </small>
-            </p>
-            <p class="quote" data-origin="Aaron Cepukas">
-                <sup>&ldquo;</sup>Thomas is very eager to master the various technologies involved in web interface development...<sub>&rdquo;</sub>
-                <small>
-                    - Aaron Cepukas, developer<br/>
-                    <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
-                </small>
-            </p>
-            <p class="quote" data-origin="Lisa Stephenson">
-                <sup>&ldquo;</sup>Thomas was one of my favourite developers to work with at henderson bas...<sub>&rdquo;</sub>
-                <small>
-                    - Lisa Stephenson, project manager<br/>
-                    <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
-                </small>
-            </p>
-        </div>
-        -->
+        <script id='quote-brian-elton' class="quote" data-origin="Brian Elton" type="text/html">
+            <sup>&ldquo;</sup>
+            Thomas has a thirst for knowledge ...
+            He is up for any challenge you put in front of him ...
+            <sub>&rdquo;</sub>
+            <small>
+                - Brian Elton, developer<br/>
+                <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
+            </small>
+        </script>
 
-        <!-- AddThis Button END
-        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f38ad5d2c95e100"></script>-->
+        <script id='quote-dmitri-farkov' class="quote" data-origin="Dmitri Farkov" type="text/html">
+            <sup>&ldquo;</sup>
+            Thomas is a talented developer with a knack for developing graphically and
+            functionally rich web applications...
+            <sub>&rdquo;</sub>
+            <small>
+                - Dmitri Farkov, developer<br/>
+                <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
+            </small>
+        </script>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-        <script>window.jQuery || document.write("<script src='js/libs/jquery-1.7.1.min.js'>\x3C/script>")</script>
+        <script id='quote-aaron-cepukas' class="quote" data-origin="Aaron Cepukas" type="text/html">
+            <sup>&ldquo;</sup>Thomas is very eager to master the various technologies involved in web interface development...<sub>&rdquo;</sub>
+            <small>
+                - Aaron Cepukas, developer<br/>
+                <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
+            </small>
+        </script>
+
+        <script id='quote-lisa-stephenson' class="quote" data-origin="Lisa Stephenson" type="text/html">
+            <sup>&ldquo;</sup>Thomas was one of my favourite developers to work with at henderson bas...<sub>&rdquo;</sub>
+            <small>
+                - Lisa Stephenson, project manager<br/>
+                <a href="http://ca.linkedin.com/pub/thomas-yuill/b/902/bb6" target="_blank" class="linkedin">LinkedIn</a>
+            </small>
+        </script>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+        <script>window.jQuery || document.write("<script src='js/vendor/jquery-2.0.3.min.js'></script>")</script>
 
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBHxrPJ8RuGTejFbiB60ykROeLsJffpxOE&sensor=true"></script>
 
         <script src="js/plugins.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/main.js"></script>
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
