@@ -949,7 +949,6 @@ body > footer {
   }
   #main section {
     -webkit-transition: opacity .5s linear;
-    opacity: 0;
   }
   #main section .projects li {
     float: left;
@@ -960,9 +959,6 @@ body > footer {
   }
   #main section .projects li:nth-child( 4n +1 ) {
     clear: left;
-  }
-  #main section.current {
-    opacity: 1;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
