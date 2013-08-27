@@ -1,5 +1,4 @@
 @media only screen and (max-width: 480px) {
-  body.nav-open header,
   body.nav-open #main {
     margin-left: 125px;
     -webkit-transform: translatex(0) !important;

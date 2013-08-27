@@ -10,13 +10,12 @@ body {
   -webkit-font-smoothing: antialiased; font-smoothing: antialiased;
   font-family: Calibri, Arial, sans-serif;
   font-size: 10px;
+
+  overflow-x: hidden;
 }
 
 body {
 
-  overflow-x: hidden;
-
-  header,
   #main {
 
     -webkit-transition: margin-left       .5s linear,
@@ -31,7 +30,6 @@ body {
 
   &.nav-open {
 
-    header,
     #main {
 
       padding-left: 0;
@@ -98,13 +96,16 @@ a {
 header {
 
   display: block;
+  position: relative;
   height: 225px;
 
   background-color: white;
 
+  margin-left: 125px;
   box-sizing: border-box;
   text-align: right;
   overflow: hidden;
+  z-index: 99;
 
   h1 {
 
@@ -186,7 +187,6 @@ nav {
 
   body.nav-open & {
     opacity: 1;
-    z-index: 999;
   }
 
   & + .toggle-nav {
@@ -220,11 +220,13 @@ nav {
 #main {
 
   clear: both;
+  position: relative;
   width: 100%;
   padding: 0 20px 0 28px;
 
   background-color: white;
   box-sizing: border-box;
+  z-index: 99;
 
   section {
 

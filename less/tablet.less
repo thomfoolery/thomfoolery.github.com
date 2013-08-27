@@ -2,7 +2,6 @@
 and ( min-width: 480px ) {
 
   body.nav-open {
-    header,
     #main {
 
       margin-left: 125px;
@@ -12,12 +11,6 @@ and ( min-width: 480px ) {
           -ms-transform: translateX( 0 ) !important;
               transform: translateX( 0 ) !important;
     }
-  }
-
-  header,
-  #main {
-    position: relative;
-    z-index: 99;
   }
 
   header {
@@ -32,8 +25,7 @@ and ( min-width: 480px ) {
   }
 
   nav {
-    position: fixed;
-    left: 0; top: 25px;
+    top: 25px;
     z-index: 9;
   }
 
@@ -127,8 +119,8 @@ and ( min-width: 960px ) {
   nav {
 
     position: absolute;
-    top: 200px;
-    padding-top: 50px;
+    top: 0;
+    padding-top: 250px;
     text-align: left;
     z-index: 999;
     opacity: 1;
