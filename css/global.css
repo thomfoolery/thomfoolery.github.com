@@ -1,0 +1,132 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 10px;
+}
+.chrome-frame {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 1em;
+  margin: 0;
+  padding: 5px 0;
+  background-color: #ffcccc;
+  color: #600;
+  font-size: 1.5em;
+  text-align: center;
+}
+.chrome-frame a {
+  color: #d00;
+}
+header {
+  margin: 50px;
+  text-align: right;
+}
+header h1 {
+  font-size: 10px;
+}
+header h1 .full-name {
+  font-size: 4em;
+  line-height: 1em;
+}
+header h1 .job-title {
+  font-size: 3em;
+  line-height: 1em;
+}
+nav {
+  width: 100px;
+  padding: 0 1em;
+  overflow: hidden;
+}
+nav .top-nav-title {
+  font-size: 1.6em;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  display: block;
+  color: red;
+  font-size: 1.6em;
+  text-decoration: none;
+}
+#main {
+  margin: 0 auto;
+}
+#main section {
+  padding-bottom: 0 0 50px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 50px;
+}
+#main section .heading {
+  padding-left: 10px;
+  border-left: 2px solid red;
+}
+#main section .heading.primary {
+  font-size: 3em;
+  line-height: 1em;
+  padding: 25px 0;
+  border-left-color: white;
+  border-bottom: 2px solid #ddd;
+  margin: 25px 0;
+}
+#main section .first-heading,
+#main section .second-heading,
+#main section .third-heading {
+  margin: 0;
+}
+#main section .first-heading {
+  font-size: 2em;
+}
+#main section .second-heading {
+  font-size: 1.7em;
+}
+#main section .third-heading {
+  font-size: 1.5em;
+}
+#main section .description {
+  padding: 25px 12px;
+  border-left: 2px solid #ddd;
+}
+#main section .description p {
+  font-size: 1.6em;
+}
+#main section .projects {
+  list-style: none;
+  padding: 0;
+}
+#main section .projects li {
+  margin: 25px 0;
+}
+#main section .projects img {
+  display: block;
+  margin: 0 auto 10px;
+}
+#main section .projects p {
+  width: 200px;
+  margin: 0 auto;
+}
+#main section .knowledge li {
+  font-size: 1.6em;
+}
+@media only screen and (min-width: 1024px) {
+  #main {
+    margin: 0 50px;
+  }
+  #main section#education article {
+    float: left;
+    width: 50%;
+  }
+  #main section#knowledge article {
+    float: left;
+    width: 33.333%;
+  }
+}
