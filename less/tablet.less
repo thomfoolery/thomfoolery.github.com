@@ -1,0 +1,187 @@
+@media only screen
+and ( min-width: 480px ) {
+
+  body.nav-open {
+    header,
+    #main {
+
+      margin-left: 100px;
+
+      -webkit-transform: translateX( 0 ) !important;
+         -moz-transform: translateX( 0 ) !important;
+          -ms-transform: translateX( 0 ) !important;
+              transform: translateX( 0 ) !important;
+    }
+  }
+
+  header,
+  #main {
+    position: relative;
+    z-index: 99;
+    padding-left: 0;
+  }
+
+  header {
+    h1 {
+      .full-name {
+        font-size: 3em;
+      }
+      .job-title {
+        font-size: 2em;
+      }
+    }
+  }
+
+  nav {
+    position: fixed;
+    left: 0; top: 25px;
+    z-index: 9;
+  }
+
+  #main {
+
+    padding-left: 28px;
+
+    section {
+
+      .icons {
+        display: block;
+      }
+
+      .projects {
+
+        li {
+          float: left;
+          width: 50%;
+
+          &:nth-child( 2n +1 ) {
+             clear: left;
+          }
+        }
+      }
+
+      &#education {
+
+        .clearfix;
+
+        article {
+          float: left;
+          width: 50%;
+        }
+      }
+
+      &#knowledge {
+
+        .clearfix;
+
+        article {
+          float: left;
+          width: 50%;
+        }
+      }
+
+      &#contact {
+        .description {
+          p {
+            margin: 25px 50px;
+          }
+        }
+      }
+    }
+
+    blockquote {
+
+      padding: 25px;
+      margin: 0 40px 250px;
+
+      p {
+        max-width: 40em;
+        margin: 0 auto 25px;
+        font-size: 3em;
+      }
+
+      footer {
+        padding: 0 25px;
+        font-size: 1.6em;
+      }
+    }
+  }
+}
+
+@media only screen
+and ( min-width: 960px ) {
+
+  body.nav-open {
+    header,
+    #main {
+      margin-left: 0 !important;
+    }
+  }
+
+  header {
+    h1 {
+      margin-right: 50px;
+
+      .full-name {
+        font-size: 4em;
+      }
+
+      .job-title {
+        font-size: 3em;
+      }
+    }
+  }
+
+  nav {
+
+    position: absolute;
+    top: 200px;
+    padding-top: 50px;
+    text-align: left;
+
+    opacity: 1;
+    z-index: 999;
+
+    & + .toggle-nav {
+      display: none;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  #main {
+
+    margin: 0 50px 0 150px;
+    padding: 0;
+
+    section {
+
+      -webkit-transition: opacity .5s linear;
+      opacity: 0;
+
+      .projects {
+
+          li {
+            float: left;
+            width: 25%;
+
+            &:nth-child( 2n +1 ) {
+              clear: none;
+            }
+
+            &:nth-child( 4n +1 ) {
+               clear: left;
+            }
+          }
+        }
+
+        &.current {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
