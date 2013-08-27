@@ -615,6 +615,9 @@ nav ul li a.current {
   color: black;
   margin-left: 10px;
 }
+nav ul li a:visited {
+  color: red;
+}
 nav  + .toggle-nav {
   display: block;
   position: fixed;
@@ -806,8 +809,10 @@ body.nav-open nav  + .toggle-nav {
 }
 body > footer {
   clear: both;
+  width: 100%;
   padding: 10px 20px;
   margin: 0 auto;
+  box-sizing: border-box;
   background-color: #ddd;
   font-size: 1.2em;
   text-align: right;
@@ -957,6 +962,7 @@ body > footer {
     top: 0;
   }
   #main {
+    width: auto;
     margin: 0 50px 0 150px;
     padding: 0;
   }
@@ -974,7 +980,7 @@ body > footer {
   #main section .projects li:nth-child( 4n +1 ) {
     clear: left;
   }
-  #main section .projects.current {
+  #main section.current {
     opacity: 1;
   }
 }
