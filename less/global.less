@@ -33,14 +33,13 @@ body {
 
     header,
     #main {
+
+      padding-left: 0;
+
       -webkit-transform: translateX( 100px );
          -moz-transform: translateX( 100px );
           -ms-transform: translateX( 100px );
               transform: translateX( 100px );
-    }
-
-    nav {
-      opacity: 1;
     }
   }
 }
@@ -71,7 +70,7 @@ a {
     &:hover,
     &:focus,
     &:active {
-      background-color: #ddd;
+      background-color: black;
     }
   }
 }
@@ -133,10 +132,19 @@ header {
 
 nav {
 
+  position: fixed;
+  left: 0; top: 75px;
+
   width: 100px;
   padding: 50px 25px 0;
   opacity: 0;
   overflow: hidden;
+  z-index: 9;
+
+  -webkit-transition: opacity .25s linear;
+     -moz-transition: opacity .25s linear;
+      -ms-transition: opacity .25s linear;
+          transition: opacity .25s linear;
 
   .top-nav-title {
     color: black;
@@ -176,6 +184,11 @@ nav {
     }
   }
 
+  body.nav-open & {
+    opacity: 1;
+    z-index: 999;
+  }
+
   & + .toggle-nav {
 
     display: block;
@@ -209,7 +222,6 @@ nav {
   clear: both;
   width: 100%;
   padding: 0 20px 0 28px;
-  margin: 0 auto;
 
   background-color: white;
   box-sizing: border-box;

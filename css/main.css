@@ -512,13 +512,11 @@ body #main {
 }
 body.nav-open header,
 body.nav-open #main {
+  padding-left: 0;
   -webkit-transform: translatex(100px);
   -moz-transform: translatex(100px);
   -ms-transform: translatex(100px);
   transform: translatex(100px);
-}
-body.nav-open nav {
-  opacity: 1;
 }
 a {
   color: black;
@@ -542,7 +540,7 @@ a.ui-btn {
 a.ui-btn:hover,
 a.ui-btn:focus,
 a.ui-btn:active {
-  background-color: #ddd;
+  background-color: black;
 }
 .chrome-frame {
   position: fixed;
@@ -586,10 +584,18 @@ header h1 .job-title em {
   color: red;
 }
 nav {
+  position: fixed;
+  left: 0;
+  top: 75px;
   width: 100px;
   padding: 50px 25px 0;
   opacity: 0;
   overflow: hidden;
+  z-index: 9;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  transition: opacity .25s linear;
 }
 nav .top-nav-title {
   color: black;
@@ -618,6 +624,10 @@ nav ul li a.current {
 nav ul li a:visited {
   color: red;
 }
+body.nav-open nav {
+  opacity: 1;
+  z-index: 999;
+}
 nav  + .toggle-nav {
   display: block;
   position: fixed;
@@ -644,7 +654,6 @@ body.nav-open nav  + .toggle-nav {
   clear: both;
   width: 100%;
   padding: 0 20px 0 28px;
-  margin: 0 auto;
   background-color: white;
   box-sizing: border-box;
 }
@@ -826,16 +835,6 @@ body > footer {
     -ms-transform: translatex(0) !important;
     transform: translatex(0) !important;
   }
-  body.nav-open nav {
-    opacity: 1;
-  }
-  nav {
-    position: fixed;
-    left: 0;
-    top: 75px;
-    padding-left: 15px;
-    z-index: 9;
-  }
   header,
   #main {
     position: relative;
@@ -933,10 +932,6 @@ body > footer {
   }
 }
 @media only screen and (min-width: 960px) {
-  body.nav-open header,
-  body.nav-open #main {
-    margin-left: 0 !important;
-  }
   header h1 {
     margin-right: 50px;
   }
@@ -951,8 +946,8 @@ body > footer {
     top: 200px;
     padding-top: 50px;
     text-align: left;
-    opacity: 1;
     z-index: 999;
+    opacity: 1;
   }
   nav  + .toggle-nav {
     display: none;
@@ -963,7 +958,7 @@ body > footer {
   }
   #main {
     width: auto;
-    margin: 0 50px 0 150px;
+    margin: 0 50px 0 125px !important;
     padding: 0;
   }
   #main section {
