@@ -842,7 +842,7 @@ body > footer {
 @media only screen and (min-width: 480px) {
   body.nav-open header,
   body.nav-open #main {
-    margin-left: 100px;
+    margin-left: 125px;
     -webkit-transform: translatex(0) !important;
     -moz-transform: translatex(0) !important;
     -ms-transform: translatex(0) !important;
