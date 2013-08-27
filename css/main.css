@@ -564,6 +564,7 @@ header {
   display: block;
   height: 225px;
   background-color: white;
+  box-sizing: border-box;
   text-align: right;
   overflow: hidden;
 }
@@ -638,9 +639,11 @@ body.nav-open nav  + .toggle-nav {
 }
 #main {
   clear: both;
+  width: 100%;
   padding: 0 20px 0 28px;
   margin: 0 auto;
   background-color: white;
+  box-sizing: border-box;
 }
 #main section {
   padding-bottom: 25px;
@@ -812,7 +815,6 @@ body > footer {
 @media only screen and (max-width: 480px) {
   body.nav-open header,
   body.nav-open #main {
-    width: 100%;
     margin-left: 125px;
     -webkit-transform: translatex(0) !important;
     -moz-transform: translatex(0) !important;
@@ -852,7 +854,6 @@ body > footer {
   #main {
     position: relative;
     z-index: 99;
-    padding-left: 0;
   }
   header h1 .full-name {
     font-size: 3em;
@@ -973,7 +974,12 @@ body > footer {
   #main section .projects li:nth-child( 4n +1 ) {
     clear: left;
   }
-  #main section.current {
+  #main section .projects.current {
+    opacity: 1;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  #main section {
     opacity: 1;
   }
 }
