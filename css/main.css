@@ -751,82 +751,80 @@ body.nav-open nav  + .toggle-nav {
   max-width: 40em;
   font-size: 1.6em;
 }
-#main section .projects {
+#main section article .projects {
   zoom: 1;
   list-style: none;
   padding: 0;
 }
-#main section .projects:before,
-#main section .projects:after {
+#main section article .projects:before,
+#main section article .projects:after {
   content: "";
   display: table;
 }
-#main section .projects:after {
+#main section article .projects:after {
   clear: both;
 }
-#main section .projects li {
+#main section article .projects li {
   margin: 50px 0;
 }
-#main section .projects img {
+#main section article .projects img {
   width: 90%;
   max-width: 200px;
   display: block;
   margin: 0 auto 10px;
 }
-#main section .projects p {
+#main section article .projects p {
   width: 90%;
   max-width: 200px;
   margin: 0 auto;
   font-size: 1.2em;
 }
-#main section .projects .ui-btn {
+#main section article .projects .ui-btn {
   margin-top: 5px;
   font-size: 15px;
 }
 #main section .knowledge li {
   font-size: 1.6em;
 }
-#main section#personal-projects article {
-  margin-bottom: 50px;
-}
-#main section#personal-projects article iframe {
-  border: none;
-  overflow: hidden;
-}
-#main section#personal-projects article .ipad-wrapper {
-  margin: 0 0 0 50px;
-}
-#main section#personal-projects article .ipad-wrapper.landscape {
-  width: 1108px;
-  height: 852px;
+#main section .ipad-wrapper,
+#main section .iphone-wrapper {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 42px;
-  background-image: url('../img/ipad-landscape-wrapper.jpg');
   background-size: cover;
 }
-#main section#personal-projects article .ipad-wrapper.landscape iframe {
+#main section .ipad-wrapper iframe,
+#main section .iphone-wrapper iframe {
+  overflow: hidden;
+  border: none;
+}
+#main section .ipad-wrapper {
+  margin: 0 0 0 50px;
+}
+#main section .ipad-wrapper.landscape {
+  width: 1108px;
+  height: 852px;
+  padding: 42px;
+  background-image: url('../img/ipad-landscape-wrapper.jpg');
+}
+#main section .ipad-wrapper.landscape iframe {
   width: 1024px;
   height: 768px;
 }
-#main section#personal-projects article .iphone-wrapper {
+#main section .iphone-wrapper {
   margin: 0 0 0 50px;
 }
-#main section#personal-projects article .iphone-wrapper.portrait {
+#main section .iphone-wrapper.portrait {
   width: 378px;
   height: 717px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 120px 28px 117px 30px;
   background-image: url('../img/iphone-portrait-wrapper.jpg');
-  background-size: cover;
 }
-#main section#personal-projects article .iphone-wrapper.portrait iframe {
+#main section .iphone-wrapper.portrait iframe {
   width: 320px;
   height: 480px;
 }
-#main section#personal-projects article .screen-warning {
-  margin: 0 25px 0 75px;
+#main section .screen-warning {
+  margin: 0 25px 50px 75px;
   font-size: 1.2em;
 }
 #main section#contact .description p {

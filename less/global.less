@@ -344,6 +344,8 @@ nav {
       }
     }
 
+    article
+
     .projects {
 
       .clearfix;
@@ -381,67 +383,60 @@ nav {
       }
     }
 
-    &#personal-projects {
-      article {
+    .ipad-wrapper,
+    .iphone-wrapper {
 
-        margin-bottom: 50px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-size: cover;
 
         iframe {
-          border: none;
           overflow: hidden;
+          border: none;
         }
+    }
 
-        .ipad-wrapper {
+    .ipad-wrapper {
 
-          margin: 0 0 0 50px;
+      margin: 0 0 0 50px;
 
-          &.landscape {
+      &.landscape {
 
-            width: 1108px;
-            height: 852px;
+        width: 1108px;
+        height: 852px;
+        padding: 42px;
 
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 42px;
+        background-image: url('../img/ipad-landscape-wrapper.jpg');
 
-            background-image: url('../img/ipad-landscape-wrapper.jpg');
-            background-size: cover;
-
-            iframe {
-              width: 1024px;
-              height: 768px;
-            }
-          }
-        }
-
-        .iphone-wrapper {
-
-          margin: 0 0 0 50px;
-
-          &.portrait {
-
-            width: 378px;
-            height: 717px;
-
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 120px 28px 117px 30px;
-
-            background-image: url('../img/iphone-portrait-wrapper.jpg');
-            background-size: cover;
-
-            iframe {
-              width: 320px;
-              height: 480px;
-            }
-          }
-        }
-
-        .screen-warning {
-          margin: 0 25px 0 75px;
-          font-size: 1.2em;
+        iframe {
+          width: 1024px;
+          height: 768px;
         }
       }
+    }
+
+    .iphone-wrapper {
+
+      margin: 0 0 0 50px;
+
+      &.portrait {
+
+        width: 378px;
+        height: 717px;
+        padding: 120px 28px 117px 30px;
+
+        background-image: url('../img/iphone-portrait-wrapper.jpg');
+
+        iframe {
+          width: 320px;
+          height: 480px;
+        }
+      }
+    }
+
+    .screen-warning {
+      margin: 0 25px 50px 75px;
+      font-size: 1.2em;
     }
 
     &#contact {
