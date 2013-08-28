@@ -49,27 +49,33 @@ a {
   &:visited {
     color: black;
   }
+}
 
-  &.ui-btn {
-    display: inline-block;
+.ui-btn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+
+  line-height: 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: black;
+  }
+
+  &:visited {
     background-color: red;
+    background-color: rgba(255,0,0,.5);
     color: white;
-
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-    border-radius: 6px;
-
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: black;
-    }
   }
 }
 
@@ -93,6 +99,15 @@ a {
   }
 }
 
+.load-iframe {
+  margin: 25px;
+  padding: 25px;
+
+  button {
+    font-size: 2em;
+  }
+}
+
 header {
 
   display: block;
@@ -102,6 +117,7 @@ header {
   background-color: white;
 
   margin-left: 125px;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: right;
   overflow: hidden;
@@ -225,6 +241,7 @@ nav {
   padding: 0 20px 0 28px;
 
   background-color: white;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 99;
 
@@ -364,6 +381,69 @@ nav {
       }
     }
 
+    &#personal-projects {
+      article {
+
+        margin-bottom: 50px;
+
+        iframe {
+          border: none;
+          overflow: hidden;
+        }
+
+        .ipad-wrapper {
+
+          margin: 0 0 0 50px;
+
+          &.landscape {
+
+            width: 1108px;
+            height: 852px;
+
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 42px;
+
+            background-image: url('../img/ipad-landscape-wrapper.jpg');
+            background-size: cover;
+
+            iframe {
+              width: 1024px;
+              height: 768px;
+            }
+          }
+        }
+
+        .iphone-wrapper {
+
+          margin: 0 0 0 50px;
+
+          &.portrait {
+
+            width: 378px;
+            height: 717px;
+
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 120px 28px 117px 30px;
+
+            background-image: url('../img/iphone-portrait-wrapper.jpg');
+            background-size: cover;
+
+            iframe {
+              width: 320px;
+              height: 480px;
+            }
+          }
+        }
+
+        .screen-warning {
+          margin: 0 25px 0 75px;
+          font-size: 1.2em;
+        }
+      }
+    }
+
     &#contact {
 
       .description {
@@ -429,6 +509,7 @@ body > footer {
   width: 100%;
   padding: 10px 20px;
   margin: 0 auto;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   background-color: #ddd;

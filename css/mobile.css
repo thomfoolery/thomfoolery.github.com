@@ -6,13 +6,15 @@
     -ms-transform: translatex(0) !important;
     transform: translatex(0) !important;
   }
-  header,
-  #main {
-    position: relative;
-    z-index: 99;
-  }
   #main section .description p {
     min-width: 0;
     width: 100%;
+  }
+  #main section#personal-projects article .ipad-wrapper,
+  #main section#personal-projects article .iphone-wrapper {
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
   }
 }

@@ -520,23 +520,28 @@ a {
 a:visited {
   color: black;
 }
-a.ui-btn {
+.ui-btn {
   display: inline-block;
   background-color: red;
   color: white;
-  width: 50px;
-  height: 20px;
   line-height: 20px;
+  padding: 5px 10px;
   border-radius: 6px;
+  border: none;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
-a.ui-btn:hover,
-a.ui-btn:focus,
-a.ui-btn:active {
+.ui-btn:hover,
+.ui-btn:focus,
+.ui-btn:active {
   background-color: black;
+}
+.ui-btn:visited {
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
 }
 .chrome-frame {
   position: fixed;
@@ -554,12 +559,20 @@ a.ui-btn:active {
 .chrome-frame a {
   color: #d00;
 }
+.load-iframe {
+  margin: 25px;
+  padding: 25px;
+}
+.load-iframe button {
+  font-size: 2em;
+}
 header {
   display: block;
   position: relative;
   height: 225px;
   background-color: white;
   margin-left: 125px;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: right;
   overflow: hidden;
@@ -654,6 +667,7 @@ body.nav-open nav  + .toggle-nav {
   width: 100%;
   padding: 0 20px 0 28px;
   background-color: white;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 99;
 }
@@ -772,6 +786,49 @@ body.nav-open nav  + .toggle-nav {
 #main section .knowledge li {
   font-size: 1.6em;
 }
+#main section#personal-projects article {
+  margin-bottom: 50px;
+}
+#main section#personal-projects article iframe {
+  border: none;
+  overflow: hidden;
+}
+#main section#personal-projects article .ipad-wrapper {
+  margin: 0 0 0 50px;
+}
+#main section#personal-projects article .ipad-wrapper.landscape {
+  width: 1108px;
+  height: 852px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 42px;
+  background-image: url('../img/ipad-landscape-wrapper.jpg');
+  background-size: cover;
+}
+#main section#personal-projects article .ipad-wrapper.landscape iframe {
+  width: 1024px;
+  height: 768px;
+}
+#main section#personal-projects article .iphone-wrapper {
+  margin: 0 0 0 50px;
+}
+#main section#personal-projects article .iphone-wrapper.portrait {
+  width: 378px;
+  height: 717px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 120px 28px 117px 30px;
+  background-image: url('../img/iphone-portrait-wrapper.jpg');
+  background-size: cover;
+}
+#main section#personal-projects article .iphone-wrapper.portrait iframe {
+  width: 320px;
+  height: 480px;
+}
+#main section#personal-projects article .screen-warning {
+  margin: 0 25px 0 75px;
+  font-size: 1.2em;
+}
 #main section#contact .description p {
   text-align: center;
   margin: 25px;
@@ -821,6 +878,7 @@ body > footer {
   width: 100%;
   padding: 10px 20px;
   margin: 0 auto;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ddd;
   font-size: 1.2em;
@@ -837,6 +895,13 @@ body > footer {
   #main section .description p {
     min-width: 0;
     width: 100%;
+  }
+  #main section#personal-projects article .ipad-wrapper,
+  #main section#personal-projects article .iphone-wrapper {
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 480px) {
@@ -961,11 +1026,11 @@ body > footer {
     clear: left;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  #main section {
-    opacity: 1;
+@media only screen and (max-width: 1300px) {
+  #main section#personal-projects article .ipad-wrapper {
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
   }
-}
-@media only screen and (min-width: 960px) {
-  
 }

@@ -1,3 +1,8 @@
-@media only screen and (min-width: 960px) {
-  
+@media only screen and (max-width: 1300px) {
+  #main section#personal-projects article .ipad-wrapper {
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
 }
