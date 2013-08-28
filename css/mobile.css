@@ -10,11 +10,8 @@
     min-width: 0;
     width: 100%;
   }
-  #main section#personal-projects article .ipad-wrapper,
-  #main section#personal-projects article .iphone-wrapper {
-    width: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
+  #main section .ipad-wrapper,
+  #main section .iphone-wrapper {
+    display: none;
   }
 }
