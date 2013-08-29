@@ -559,13 +559,6 @@ a:visited {
 .chrome-frame a {
   color: #d00;
 }
-.load-iframe {
-  margin: 25px;
-  padding: 25px;
-}
-.load-iframe button {
-  font-size: 2em;
-}
 header {
   display: block;
   position: relative;
@@ -793,9 +786,21 @@ body.nav-open nav  + .toggle-nav {
   background-size: cover;
 }
 #main section .ipad-wrapper iframe,
-#main section .iphone-wrapper iframe {
+#main section .iphone-wrapper iframe,
+#main section .ipad-wrapper .load-iframe,
+#main section .iphone-wrapper .load-iframe {
   overflow: hidden;
   border: none;
+  cursor: pointer;
+}
+#main section .ipad-wrapper iframe button,
+#main section .iphone-wrapper iframe button,
+#main section .ipad-wrapper .load-iframe button,
+#main section .iphone-wrapper .load-iframe button {
+  display: block;
+  font-size: 5em;
+  line-height: 1em;
+  padding: 5px 40px;
 }
 #main section .ipad-wrapper {
   margin: 0 0 0 50px;
@@ -806,9 +811,14 @@ body.nav-open nav  + .toggle-nav {
   padding: 42px;
   background-image: url('../img/ipad-landscape-wrapper.jpg');
 }
-#main section .ipad-wrapper.landscape iframe {
+#main section .ipad-wrapper.landscape iframe,
+#main section .ipad-wrapper.landscape .load-iframe {
   width: 1024px;
   height: 768px;
+}
+#main section .ipad-wrapper.landscape iframe button,
+#main section .ipad-wrapper.landscape .load-iframe button {
+  margin: 480px auto 0;
 }
 #main section .iphone-wrapper {
   margin: 0 0 0 50px;
@@ -819,9 +829,14 @@ body.nav-open nav  + .toggle-nav {
   padding: 120px 28px 117px 30px;
   background-image: url('../img/iphone-portrait-wrapper.jpg');
 }
-#main section .iphone-wrapper.portrait iframe {
+#main section .iphone-wrapper.portrait iframe,
+#main section .iphone-wrapper.portrait .load-iframe {
   width: 320px;
   height: 480px;
+}
+#main section .iphone-wrapper.portrait iframe button,
+#main section .iphone-wrapper.portrait .load-iframe button {
+  margin: 200px auto 0;
 }
 #main section .screen-warning {
   margin: 0 25px 50px 75px;
@@ -894,12 +909,9 @@ body > footer {
     min-width: 0;
     width: 100%;
   }
-  #main section#personal-projects article .ipad-wrapper,
-  #main section#personal-projects article .iphone-wrapper {
-    width: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
+  #main section .ipad-wrapper,
+  #main section .iphone-wrapper {
+    display: none;
   }
 }
 @media only screen and (min-width: 480px) {

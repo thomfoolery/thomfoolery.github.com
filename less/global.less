@@ -99,15 +99,6 @@ a {
   }
 }
 
-.load-iframe {
-  margin: 25px;
-  padding: 25px;
-
-  button {
-    font-size: 2em;
-  }
-}
-
 header {
 
   display: block;
@@ -390,9 +381,19 @@ nav {
         box-sizing: border-box;
         background-size: cover;
 
-        iframe {
+        iframe,
+        .load-iframe {
+
           overflow: hidden;
           border: none;
+          cursor: pointer;
+
+          button {
+            display: block;
+            font-size: 5em;
+            line-height: 1em;
+            padding: 5px 40px;
+          }
         }
     }
 
@@ -408,9 +409,15 @@ nav {
 
         background-image: url('../img/ipad-landscape-wrapper.jpg');
 
-        iframe {
+        iframe,
+        .load-iframe {
+
           width: 1024px;
           height: 768px;
+
+          button {
+            margin: 480px auto 0;
+          }
         }
       }
     }
@@ -427,9 +434,15 @@ nav {
 
         background-image: url('../img/iphone-portrait-wrapper.jpg');
 
-        iframe {
+        iframe,
+        .load-iframe {
+
           width: 320px;
           height: 480px;
+
+          button {
+            margin: 200px auto 0;
+          }
         }
       }
     }
