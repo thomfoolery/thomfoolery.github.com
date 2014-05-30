@@ -850,7 +850,7 @@ nav {
   left: 0;
   top: 75px;
   width: 100px;
-  padding: 50px 25px 0;
+  padding: 50px 0 0 18px;
   opacity: 0;
   overflow: hidden;
   z-index: 9;
