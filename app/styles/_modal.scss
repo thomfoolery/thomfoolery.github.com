@@ -1,0 +1,65 @@
+.modal-content {
+  background-color: #666;
+}
+
+.modal-header {
+  border-bottom-color: #777;
+
+  button.close {
+    color: $brand-primary;
+    font-size: 50px;
+    margin-top: -12px;
+    opacity: 1;
+    text-shadow: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.modal-title {
+  color: $brand-primary;
+  font-weight: 100;
+  font-size: 30px;
+  margin-left: 12px;
+}
+
+.modal-body {
+  font-weight: 100;
+  font-size: 30px;
+  color: #eee;
+  line-height: 1.1em;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: $brand-primary;
+    font-weight: 100;
+    font-size: 30px;
+  }
+
+  ul {
+    @extend .text-monospace;
+
+    padding-left: 20px;
+
+    a {
+      display: block;
+      font-size: 20px;
+      line-height: 1.2em;
+    }
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+
+    img {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+}
