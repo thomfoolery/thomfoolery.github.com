@@ -6,6 +6,10 @@
 .bg-6{ background-image: url(/img/1/6.jpg); background-position: 100%  50% !important; }
 .bg-7{ background-image: url(/img/1/7.jpg); }
 
+* {
+  outline: none;
+}
+
 .browsehappy {
   margin: 0;
   background: #222;
@@ -52,7 +56,7 @@ strong[parallax-element] {
       .contact-icons {
         a {
           color: white;
-          padding: 10px 10px;
+          padding: 10px;
           opacity: .5;
 
           &:hover {
@@ -170,8 +174,17 @@ strong[parallax-element] {
 footer {
   background-color: #222;
   color: $brand-primary;
-  line-height: 3em;
+  line-height: 55px;
   padding: 1em 0;
   border-top: 3px solid $brand-primary;
   font-weight: 100;
+  font-size: 12px;
+}
+
+#modal-site-details {
+  text-align: center;
+
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
 }

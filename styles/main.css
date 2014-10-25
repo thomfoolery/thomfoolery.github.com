@@ -6605,6 +6605,10 @@ p {
   background-image: url(/img/1/7.jpg);
 }
 
+* {
+  outline: none;
+}
+
 .browsehappy {
   margin: 0;
   background: #222;
@@ -6649,7 +6653,7 @@ strong[parallax-element] {
 }
 #main-content .layer.bottom .contact-icons a {
   color: white;
-  padding: 10px 10px;
+  padding: 10px;
   opacity: .5;
 }
 #main-content .layer.bottom .contact-icons a:hover {
@@ -6745,10 +6749,20 @@ strong[parallax-element] {
 footer {
   background-color: #222;
   color: #00c8d7;
-  line-height: 3em;
+  line-height: 55px;
   padding: 1em 0;
   border-top: 3px solid #00c8d7;
   font-weight: 100;
+  font-size: 12px;
+}
+
+#modal-site-details {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #modal-site-details {
+    text-align: left;
+  }
 }
 
 @media screen {
@@ -6809,8 +6823,8 @@ nav.global-nav:hover a:hover, nav.global-nav:hover a:focus {
     top: 50%;
     width: auto;
     border-bottom: none;
-    -webkit-transform: translate3d(-35px, -50%, 0);
-    transform: translate3d(-35px, -50%, 0);
+    -webkit-transform: translate3d(-5px, -50%, 0);
+    transform: translate3d(-5px, -50%, 0);
   }
   nav.global-nav a {
     display: block;
@@ -6818,14 +6832,6 @@ nav.global-nav:hover a:hover, nav.global-nav:hover a:focus {
     border-radius: 0 50% 50% 0;
     padding: 20px;
     opacity: .5;
-  }
-  nav.global-nav:hover {
-    -webkit-transform: translate3d(-5px, -50%, 0);
-    transform: translate3d(-5px, -50%, 0);
-  }
-  html.touch nav.global-nav {
-    -webkit-transform: translate3d(-5px, -50%, 0);
-    transform: translate3d(-5px, -50%, 0);
   }
 }
 

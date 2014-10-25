@@ -110,12 +110,14 @@
         <div class="layer-background bg-2" parallax-element></div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-offset-1 col-sm-11 text-center col-md-offset-2 col-md-10 text-center">
+            <div class="col-lg-offset-1 col-lg-11 text-center">
               <p parallax-element data-parallax-scale=".1">
-                <strong>5&nbsp;years</strong><br>
+                <strong class="text-xl">5</strong><br>
+                <strong>years</strong><br>
                 of experience developing<br>
                 <strong>
-                  <span class="text-monospace">HTML<i class="icon-html5 vertical-middle"></i></span>&nbsp;Web&nbsp;Applications
+                  <span class="text-monospace">HTML<i class="icon-html5 vertical-middle"></i></span>
+                  Web&nbsp;Applications
                 </strong><br>
                 with industry leading languages and frameworks
               </p>
@@ -161,7 +163,8 @@
           <div class="row">
             <div class="col-sm-offset-6 col-lg-offset-6 col-sm-6 col-lg-5" parallax-element data-parallax-scale=".1">
               <p>
-                Over <strong>10&nbsp;years</strong><br>
+                <strong><span class="text-lg">10</span><br>
+                years</strong><br>
                 of experience building<br>
                 <strong>Corporate</strong>,&nbsp;<strong>Commercial</strong><br>
                 <span class="text-xs">&amp;</span>&nbsp;<strong>Personal</strong>&nbsp;web&nbsp;sites
@@ -203,7 +206,7 @@
         <div class="layer-background bg-4" parallax-element></div>
         <div class="container text-center" parallax-element>
           <div class="row">
-            <div class="col-sm-offset-1 col-sm-11">
+            <div class="col-md-offset-1 col-md-11">
               <div class="row">
                 <div class="col-sm-6">
                   <p parallax-element data-parallax-scale=".2">
@@ -275,17 +278,19 @@
               <br>
               <hr width="50%">
               <br>
-              <p>
-                I am available for short-term projects and consultation.
-              </p>
               <div class="contact-icons">
-                Please feel free to contact me.<br><br>
-                <a href="mailto:thomas.yuill@gmail.com?subject=Inquiry%20from%20thom-foolery.com" target="_blank"><i class="icon-mail"></i></a>
-                <a href="http://www.linkedin.com/pub/thomas-yuill/b/902/bb6/" target="_blank"><i class="icon-linkedin"></i></a>
-                <!-- <a href="https://facebook.com/thomas.yuill" target="_blank"><i class="icon-facebook2"></i></a> -->
+                I am available for short-term projects and consultation.<br>
+                <br>
+                Please feel free to review my work here,<br>
                 <a href="https://instagram.com/thom_foolery" target="_blank"><i class="icon-instagram"></i></a>
                 <a href="https://github.com/thomfoolery" target="_blank"><i class="icon-github5"></i></a>
                 <a href="/resume.thomas.yuill.pdf" target="_blank"><i class="icon-file"></i></a>
+              </div>
+              <br>
+              <div class="contact-icons">
+                or contact me here here<br>
+                <a href="mailto:thomas.yuill@gmail.com?subject=Inquiry%20from%20thom-foolery.com" target="_blank"><i class="icon-mail"></i></a>
+                <a href="http://www.linkedin.com/pub/thomas-yuill/b/902/bb6/" target="_blank"><i class="icon-linkedin"></i></a>
               </div>
               <br>
               <div>
@@ -297,17 +302,17 @@
       </div>
     </section>
 
-    <a href="#site-details" class="site-details" data-toggle="modal" data-target="#myModal">
+    <a href="#site-details" class="site-details" data-toggle="modal" data-target="#modal-site-details">
       <i class="icon-info"></i>
     </a>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-site-details" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Site Details</h4>
+            <h4 class="modal-title" id="modalLabel">Site Details</h4>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
@@ -315,44 +320,46 @@
                 I built this site myself with the help of a few few tools and resources.
                 You can check them out below.
               </div>
-              <div class="col-xs-6">
-                <h2>Tools</h2>
-                <div class="text-center">
-                  <a href="https://www.npmjs.org/" target="_blank" title="SASS">
-                    <!-- SASS -->
-                    <img src="/img/logos/sass.png" width="50px">
-                  </a>
-                  <a href="http://gulpjs.com/" target="_blank" title="GulpJS">
-                    <!-- GulpJS -->
-                    <img src="/img/logos/gulp.png" width="50px">
-                  </a>
-                  <a href="http://bower.io/" target="_blank" title="Bower">
-                    <!-- Bower -->
-                    <img src="/img/logos/bower.png" width="50px">
-                  </a>
-                  <br>
-                  <a href="https://www.npmjs.org/" target="_blank" title="jQuery">
-                    <!-- JQUERY -->
-                    <img src="/img/logos/jquery.png" width="50px">
-                  </a>
-                  <a href="https://www.npmjs.org/" target="_blank" title="NPM">
-                    <!-- NPM -->
-                    <img src="/img/logos/npm.png" width="50px">
-                  </a>
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Tools</h2>
+                  <div class="text-center">
+                    <a href="https://www.npmjs.org/" target="_blank" title="SASS">
+                      <!-- SASS -->
+                      <img src="/img/logos/sass.png" width="50px">
+                    </a>
+                    <a href="http://gulpjs.com/" target="_blank" title="GulpJS">
+                      <!-- GulpJS -->
+                      <img src="/img/logos/gulp.png" width="50px">
+                    </a>
+                    <a href="http://bower.io/" target="_blank" title="Bower">
+                      <!-- Bower -->
+                      <img src="/img/logos/bower.png" width="50px">
+                    </a>
+                    <br>
+                    <a href="https://www.npmjs.org/" target="_blank" title="jQuery">
+                      <!-- JQUERY -->
+                      <img src="/img/logos/jquery.png" width="50px">
+                    </a>
+                    <a href="https://www.npmjs.org/" target="_blank" title="NPM">
+                      <!-- NPM -->
+                      <img src="/img/logos/npm.png" width="50px">
+                    </a>
+                  </div>
+                  <ul class="list-unstyled">
+                    <li><a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
+                    <li><a href="http://requirejs.org/" target="_blank">RequireJS</a></li>
+                    <li><a href="http://responsejs.com/" target="_blank">ResponseJS</a></li>
+                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
+                  </ul>
                 </div>
-                <ul class="list-unstyled">
-                  <li><a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
-                  <li><a href="http://requirejs.org/" target="_blank">RequireJS</a></li>
-                  <li><a href="http://responsejs.com/" target="_blank">ResponseJS</a></li>
-                  <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
-                </ul>
-              </div>
-              <div class="col-xs-6">
-                <h2>Resources</h2>
-                <ul class="list-unstyled">
-                  <li><a href="https://icomoon.io" target="_blank">Icomoon</a></li>
-                  <li><a href="https://unsplash.com/" target="_blank">Unsplash.com</a></li>
-                </ul>
+                <div class="col-sm-6">
+                  <h2>Resources</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="https://icomoon.io" target="_blank">Icomoon</a></li>
+                    <li><a href="https://unsplash.com/" target="_blank">Unsplash.com</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
