@@ -1,0 +1,47 @@
+{
+  "name": "thomfoolery.github.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "connect": "^2.21.0",
+    "connect-livereload": "^0.4.0",
+    "gulp-autoprefixer": "^0.0.7",
+    "gulp": "^3.8.1",
+    "gulp-bower-files": "^0.2.5",
+    "gulp-clean": "^0.2.4",
+    "gulp-csso": "^0.2.9",
+    "gulp-cache": "^0.1.11",
+    "gulp-filter": "^0.4.1",
+    "gulp-flatten": "^0.0.2",
+    "gulp-jshint": "^1.6.3",
+    "gulp-imagemin": "^0.5.1",
+    "gulp-livereload": "^1.5.0",
+    "gulp-load-plugins": "^0.5.2",
+    "gulp-plumber": "^0.6.3",
+    "gulp-size": "^0.3.1",
+    "gulp-ruby-sass": "^0.4.3",
+    "gulp-useref": "^0.4.4",
+    "gulp-uglify": "^0.2.1",
+    "jshint-stylish": "^0.2.0",
+    "opn": "^0.1.2",
+    "wiredep": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomfoolery/thomfoolery.github.com.git"
+  },
+  "author": "Thomas Yuill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomfoolery/thomfoolery.github.com/issues"
+  },
+  "homepage": "https://github.com/thomfoolery/thomfoolery.github.com"
+}
