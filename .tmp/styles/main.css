@@ -6653,8 +6653,9 @@ strong[parallax-element] {
 }
 #main-content .layer.bottom .contact-icons a {
   color: white;
-  padding: 10px;
+  padding: 20px;
   opacity: .5;
+  font-size: 2em;
 }
 #main-content .layer.bottom .contact-icons a:hover {
   opacity: 1;
