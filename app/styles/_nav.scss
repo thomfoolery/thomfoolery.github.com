@@ -56,7 +56,7 @@ nav.global-nav {
     top: 50%;
     width: auto;
     border-bottom: none;
-    transform: translate3d(-35px,-50%,0);
+    transform: translate3d(-5px,-50%,0);
 
     a {
       display: block;
@@ -64,14 +64,6 @@ nav.global-nav {
       border-radius: 0 50% 50% 0;
       padding: 20px;
       opacity: .5;
-    }
-
-    &:hover {
-      transform: translate3d(-5px,-50%,0);
-    }
-
-    html.touch & {
-      transform: translate3d(-5px,-50%,0);
     }
   }
 }
