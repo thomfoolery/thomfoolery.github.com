@@ -6970,6 +6970,7 @@ nav.global-nav:hover a:hover, nav.global-nav:hover a:focus {
     line-height: 2em;
     padding: 0 10px;
     border-radius: 4px;
+    margin-left: 0;
     margin-top: -1em;
     background-color: rgba(71, 66, 64, 0.75);
     white-space: nowrap;
