@@ -29,20 +29,12 @@ define(['jquery','velocity-ui','reveal','parallax','scroll-to'],
         if (status == google.maps.GeocoderStatus.OK) {
           mapOptions.center = results[0].geometry.location;
           var map = new google.maps.Map(document.getElementById('map-canvas-philadelphia'), mapOptions);
-          var marker = new google.maps.Marker({
-              "map": map,
-              "position": results[0].geometry.location
-          });
         }
       });
       geocoder.geocode({ 'address': 'Toronto, Canada'}, function( results, status ) {
         if (status == google.maps.GeocoderStatus.OK) {
           mapOptions.center = results[0].geometry.location;
           var map = new google.maps.Map(document.getElementById('map-canvas-toronto'), mapOptions);
-          var marker = new google.maps.Marker({
-              "map": map,
-              "position": results[0].geometry.location
-          });
         }
       });
     };
