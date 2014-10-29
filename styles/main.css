@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 @import url(../fonts/icomoon.css);
 html {
@@ -6525,7 +6526,7 @@ html {
   vertical-align: middle;
 }
 
-.text-monospace, .jumbotron h1 .job-title, .modal-body ul {
+.text-monospace, .jumbotron h1 .job-title span, .list-skills li a, .modal-body ul {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
@@ -6648,6 +6649,74 @@ strong[parallax-element] {
     font-size: 3vw;
   }
 }
+#main-content .layer.map {
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+}
+#main-content .layer.map #map-canvas-toronto,
+#main-content .layer.map #map-canvas-philadelphia {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 5px 25px black;
+  margin: 20px auto;
+  z-index: 9;
+}
+#main-content .layer.map .divider {
+  width: 0;
+  height: 150px;
+  margin: 0 auto;
+}
+#main-content .layer.map .divider hr {
+  width: 0;
+  height: 100%;
+  border: none;
+  border-left: 5px dashed white;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-content .layer.map #map-canvas-toronto,
+  #main-content .layer.map #map-canvas-philadelphia {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 768px) {
+  #main-content .layer.map {
+    min-height: 0;
+    height: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  #main-content .layer.map .divider {
+    position: relative;
+    width: 33.3333333333%;
+    padding-top: 50px;
+    z-index: 9;
+  }
+  #main-content .layer.map .divider small {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+  }
+  #main-content .layer.map .divider small i {
+    display: inline-block;
+    margin: -2px 5px;
+  }
+  #main-content .layer.map .divider hr {
+    display: block;
+    width: 100%;
+    height: 0;
+    border-top: 5px dashed white;
+    margin: 0;
+  }
+  #main-content .layer.map #map-canvas-toronto,
+  #main-content .layer.map #map-canvas-philadelphia {
+    top: -150px;
+  }
+}
 #main-content .layer.bottom {
   min-height: 0;
 }
@@ -6660,6 +6729,11 @@ strong[parallax-element] {
 #main-content .layer.bottom .contact-icons a:hover {
   opacity: 1;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  #main-content .layer.bottom {
+    padding-top: 300px;
+  }
 }
 #main-content .layer-background {
   position: absolute;
@@ -6677,26 +6751,37 @@ strong[parallax-element] {
   margin-bottom: 0;
 }
 .jumbotron h1 {
+  float: right;
   color: white;
-  font-size: 8vw;
-  padding: 40vh 0 5vh;
+  padding: 35vh 0 5vh;
   margin: 0;
 }
-.jumbotron h1 .full-name span {
-  margin-left: -.35em;
+.jumbotron h1 .intro {
+  font-size: 5vw;
+  font-weight: 100;
+}
+.jumbotron h1 .full-name {
+  font-size: 14vw;
+  letter-spacing: -0.1em;
 }
 .jumbotron h1 .job-title {
   color: white;
   display: block;
   margin-bottom: 10px;
-  font-size: 4vw;
-  letter-spacing: -0.1em;
+  font-size: 8vw;
+  text-align: right;
+}
+.jumbotron h1 .job-title small {
+  font-weight: 100;
+  margin-right: .5em;
+  font-size: 5vw;
 }
 .jumbotron h1 .job-title span {
-  margin-left: -.45em;
+  letter-spacing: -0.1em;
 }
 .jumbotron h1 .icons {
   font-size: 25px;
+  text-align: right;
 }
 .jumbotron .hint-scroll-down {
   position: absolute;
@@ -6719,6 +6804,20 @@ strong[parallax-element] {
   text-decoration: none;
   opacity: 1;
 }
+@media (min-width: 768px) {
+  .jumbotron h1 .intro {
+    font-size: 30px;
+  }
+  .jumbotron h1 .full-name {
+    font-size: 100px;
+  }
+  .jumbotron h1 .job-title {
+    font-size: 50px;
+  }
+  .jumbotron h1 .job-title small {
+    font-size: 30px;
+  }
+}
 
 .list-skills {
   list-style: none;
@@ -6733,6 +6832,15 @@ strong[parallax-element] {
   border-radius: 50%;
   border: 5px solid white;
   margin: 0 auto 20px;
+}
+.list-skills li a {
+  color: white;
+}
+.list-skills li a:hover {
+  text-decoration: none;
+}
+.list-skills li a:hover:after {
+  content: ' »';
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .list-skills li {
@@ -6812,6 +6920,21 @@ nav.global-nav a:hover, nav.global-nav a:focus {
   text-decoration: none;
   opacity: 1;
 }
+nav.global-nav a:hover:after, nav.global-nav a:focus:after {
+  display: inline-block;
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  width: 100px;
+  line-height: 2em;
+  padding: 0 10px;
+  border-radius: 4px;
+  margin-left: -50px;
+  background-color: rgba(71, 66, 64, 0.75);
+  text-align: center;
+  white-space: nowrap;
+}
 nav.global-nav:hover a {
   opacity: .5;
 }
@@ -6833,6 +6956,23 @@ nav.global-nav:hover a:hover, nav.global-nav:hover a:focus {
     border-radius: 0 50% 50% 0;
     padding: 20px;
     opacity: .5;
+  }
+  nav.global-nav a:hover {
+    position: relative;
+  }
+  nav.global-nav a:hover:after {
+    display: inline-block;
+    content: attr(title);
+    position: absolute;
+    left: 75px;
+    top: 50%;
+    width: auto;
+    line-height: 2em;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-top: -1em;
+    background-color: rgba(71, 66, 64, 0.75);
+    white-space: nowrap;
   }
 }
 

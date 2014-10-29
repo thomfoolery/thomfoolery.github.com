@@ -37,6 +37,22 @@ nav.global-nav {
     &:focus {
       text-decoration: none;
       opacity: 1;
+
+      &:after {
+        display: inline-block;
+        content: attr(title);
+        position: absolute;
+        left: 50%;
+        top: 60px;
+        width: 100px;
+        line-height: 2em;
+        padding: 0 10px;
+        border-radius: 4px;
+        margin-left: -50px;
+        background-color: rgba(#474240,.75);
+        text-align: center;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -64,6 +80,25 @@ nav.global-nav {
       border-radius: 0 50% 50% 0;
       padding: 20px;
       opacity: .5;
+
+      &:hover {
+        position: relative;
+
+        &:after {
+          display: inline-block;
+          content: attr(title);
+          position: absolute;
+          left: 75px;
+          top: 50%;
+          width: auto;
+          line-height: 2em;
+          padding: 0 10px;
+          border-radius: 4px;
+          margin-top: -1em;
+          background-color: rgba(#474240,.75);
+          white-space: nowrap;
+        }
+      }
     }
   }
 }
