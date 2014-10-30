@@ -175,11 +175,13 @@ strong[parallax-element] {
     .intro {
       font-size: 5vw;
       font-weight: 100;
+      white-space: nowrap;
     }
 
     .full-name {
       font-size: 14vw;
       letter-spacing: -0.1em;
+      white-space: nowrap;
     }
 
     .job-title {
@@ -188,6 +190,7 @@ strong[parallax-element] {
       margin-bottom: 10px;
       font-size: 8vw;
       text-align: right;
+      white-space: nowrap;
 
       small {
         font-weight: 100;

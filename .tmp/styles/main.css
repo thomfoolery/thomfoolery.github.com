@@ -6759,10 +6759,12 @@ strong[parallax-element] {
 .jumbotron h1 .intro {
   font-size: 5vw;
   font-weight: 100;
+  white-space: nowrap;
 }
 .jumbotron h1 .full-name {
   font-size: 14vw;
   letter-spacing: -0.1em;
+  white-space: nowrap;
 }
 .jumbotron h1 .job-title {
   color: white;
@@ -6770,6 +6772,7 @@ strong[parallax-element] {
   margin-bottom: 10px;
   font-size: 8vw;
   text-align: right;
+  white-space: nowrap;
 }
 .jumbotron h1 .job-title small {
   font-weight: 100;
